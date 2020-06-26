@@ -8,4 +8,5 @@ class registeredUsers(models.Model):
     mail = models.EmailField()
     fio = models.CharField(max_length=30)
     dateb = models.CharField(max_length=12)
+    role = models.CharField(max_length=20)
 
