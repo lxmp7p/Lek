@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% if username == 'admin' %}
+<div>
+    <table border="solid">
+        <tr>
+            <th>ID</th>
+            <th>Логин</th>
+            <th>Почта</th>
+            <th>ФИО</th>
+            <th>Дата рождения</th>
+            <th>Принять</th>
+            <th>Отклонить</th></tr>
+            {% for list in listRequest %}
+        <form method="POST">
+            {% csrf_token %}
+                    <tr>
+                        <td> <input type="text" value="{{ list.id }}" id="list.id" name="list.id"> </td>
+                        <td> <input type="text" value="{{ list.username }}" id="list.username" name="list.username"> </td>
+                        <td> <input type="text" value="{{ list.mail }}" id="list.mail" name="list.mail"> </td>
+                        <td> <input type="text" value="{{ list.fio }}" id="list.fio" name=list.fio"> </td>
+                        <td> <input type="text" value="{{ list.dateb }}" id="list.dateb" name="list.dateb"> </td>
+                        <td> <input type="submit" VALUE="Принять" name="ACCEPT"> </td>
+                        <td> <input type="submit" VALUE="Отклонить" name="DELETE"> </td>
+                    </tr>
+            </form>
+            {% endfor %}
+    </table>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endif %}
+</body>
+</html>
