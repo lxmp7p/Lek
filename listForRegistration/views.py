@@ -31,13 +31,24 @@ def listForRegistrationPage(request):
         print(r'cccc!!!!!!', request.body)
         action_re = re.findall(r'ACCEPT|DELETE', str(request.body)) #Получение имени нажатой кнопки через регулярку
         role = re.findall(r'kommission|secretar', str(request.body)) #Получение роли через регулярку
-        i = re.findall(r'(ACCEPT|DELETE)+(......*=)', str(request.body))  # Получение id записи через регулярку
-        object = 0
-        print(i)
-        for a in i:
-            object = a[1]
-        object = object[1:-4]
-        object = int(object)
+        i_accept = re.findall(r'ACCEPT+(......*=)', str(request.body))  # Получение id записи через регулярку
+        i_delete = re.findall(r'DELETE+(....*=)', str(request.body))  # Получение id записи через регулярку
+        object_accept = 0
+        object_delete = 0
+        print(r'ID Удалить: ', i_delete, 'ID Сохранить', i_accept)
+        for a in i_accept:
+            i_accept = a
+        for d in i_delete:
+            i_delete = d
+        print(i_delete)
+        print(i_accept)
+        if i_accept:
+            object_accept = i_accept[1:-4]
+            object_accept = int(object_accept)
+        if i_delete:
+            object_delete = i_delete[1:-1]
+            object_delete = int(object_delete)
+        print(r'ID Удалить: ', object_delete, 'ID Сохранить', object_accept)
         action = ''
         for i in action_re:
             action = i
@@ -49,9 +60,8 @@ def listForRegistrationPage(request):
         # В action хранится значение нажатой кнопки типа str (ACCEPT/DELETE)
         if action=="ACCEPT":
             for i in models.listRegisterRequest.objects.values_list(): # Пробегаем по таблице с заявками
-                if i[0] == object:
+                if i[0] == object_accept:
                     req = list(i)
-                    print(req)
                     password = random_password()
                     user = User.objects.create_user(username=req[1],
                                                     email=req[2],
@@ -74,7 +84,7 @@ def listForRegistrationPage(request):
 
         elif action=="DELETE":
             for i in models.listRegisterRequest.objects.values_list(): # Пробегаем по таблице с заявками
-                if i[0] == object:
+                if i[0] == object_delete:
                     models.listRegisterRequest.objects.filter(id=i[0]).delete() #Удаляем заявку
     else:
         form = RegisterForm()
