@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'login.apps.LoginConfig',
     'registration.apps.RegistrationConfig',
-    'listForRegistration.apps.ListForRegistrationConfig'
+    'listForRegistration.apps.ListForRegistrationConfig',
 ]
 
 MIDDLEWARE = [
@@ -126,3 +126,4 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "Lek/static")
 ]
+AUTH_USER_MODEL = 'listForRegistration.registeredUsers'
