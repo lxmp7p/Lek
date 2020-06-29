@@ -19,7 +19,7 @@ class registeredUsers(AbstractUser):
     date_joined = models.CharField(max_length=20)
 
 class Role(models.Model):
-    role = models.CharField(max_length=30, db_index=True, verbose_name='Наименование роли')
+    role = models.CharField(max_length=30, db_index=True, verbose_name='Наименование роли ')
 
 
 
