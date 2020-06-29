@@ -35,6 +35,7 @@ def listForRegistrationPage(request):
         i_delete = re.findall(r'DELETE+(....*=)', str(request.body))  # Получение id записи через регулярку
         object_accept = 0
         object_delete = 0
+        role_id = 0
         print(r'ID Удалить: ', i_delete, 'ID Сохранить', i_accept)
         for a in i_accept:
             i_accept = a
@@ -58,6 +59,14 @@ def listForRegistrationPage(request):
         req = ''
         # В object хранится значение id нажатой кнопки типа int
         # В action хранится значение нажатой кнопки типа str (ACCEPT/DELETE)
+        print(r"Роль", role)
+
+        if role == "kommission":
+            role_id = 1
+        elif role == "secretar":
+            role_id = 2
+        print("Роль")
+        print(role_id)
         if action=="ACCEPT":
             for i in models.listRegisterRequest.objects.values_list(): # Пробегаем по таблице с заявками
                 if i[0] == object_accept:
@@ -68,7 +77,7 @@ def listForRegistrationPage(request):
                                                     fio=req[3],
                                                     dateb=req[4],
                                                     password=password,
-                                                    role=role,
+                                                    role_id=role_id,
                                                     username_field=req[1],
                                                     is_superuser='None',
                                                     last_login='None',
