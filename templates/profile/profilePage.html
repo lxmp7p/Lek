@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% block content %}
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100 p-t-85 p-b-20">
+				{{ form.non_field.error }}
+				<form class="login100-form validate-form" method="post">
+                    {% csrf_token %}
+					<span class="login100-form-title p-b-70" method="POST">
+						Персональная информация
+					</span>
+					<div class="wrap-input100 validate-input m-b-35" data-validate = "Enter num">
+						<label for="{{ form.num.id_for_label }}"></label>
+						<br>
+						{{ form.num }}
+						<span class="focus-input100" data-placeholder="Номер телефона"></span>
+						<div class='invalid-feedback'>Введите номер телефона</div>
+							{{ form.num.errors }}
+					</div>
+
+                    <div class="wrap-input100 validate-input m-b-35" data-validate = "Enter dolzhnost">
+						<label for="{{ form.dolzhnost.id_for_label }}"></label>
+						<br>
+						{{ form.dolzhnost }}
+						<span class="focus-input100" data-placeholder="Должность"></span>
+						<div class='invalid-feedback'>Введите должность</div>
+							{{ form.dolzhnost.errors }}
+					</div>
+
+                    <div class="wrap-input100 validate-input  m-b-35" >
+						<label for="{{ form.place_work.id_for_label }}"></label>
+						<br>
+						{{ form.place_work }}
+						<span class="focus-input100" data-placeholder="Место работы"></span>
+						<div class='invalid-feedback'>Введите место работы</div>
+							{{ form.place_work.errors }}
+					</div>
+					<div class="wrap-input100 validate-input m-b-50" data-validate="Enter new_password">
+						<label for="{{ form.password.id_for_label }}"></label>
+						<br>
+						{{ form.password }}
+                        <span class="focus-input100" data-placeholder="Новый пароль"></span>
+						<div class='invalid-feedback'>Введите новый пароль</div>
+							{{ form.password.errors }}
+					</div>
+					<div class="container-login100-form-btn">
+						<button class="login100-form-btn" type="submit">
+							Сохранить
+						</button>
+					</div>
+                    <br>
+				</form>
+			</div>
+		</div>
+	</div>
+{% endblock %}
