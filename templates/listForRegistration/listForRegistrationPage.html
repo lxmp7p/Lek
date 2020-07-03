@@ -1,97 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-      {% load static %}
-
-    <!--===============================================================================================-->
-	<link rel="stylesheet" href="{% static 'login_page/css/bootstrap.min.css' %}">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{% static 'login_page/fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{% static 'login_page/fonts/iconic/css/material-design-iconic-font.min.css' %}">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{% static 'login_page/vendor/animate/animate.css' %}">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{% static 'login_page/vendor/css-hamburgers/hamburgers.min.css' %}">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{% static 'login_page/vendor/animsition/css/animsition.min.css' %}">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{% static 'login_page/vendor/select2/select2.min.css' %}">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{% static 'login_page/vendor/daterangepicker/daterangepicker.css' %}">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{% static 'login_page/css/util.css' %}">
-	<link rel="stylesheet" type="text/css" href="{% static 'login_page/css/main.css' %}">
-<!--===============================================================================================-->
-</head>
-<body>
-<nav class="navbar navbar-light bg-dark p-2">
-  <form class="form-inline  my-2 my-lg-0">
-      <button class="btn btn-outline-success" type="button">ЛЭК</button>
-  </form>
-     <form class="form-inline my-2 my-lg-0">
-         <h3 class="btn btn-outline-success my-2 my-sm-0" type="text">{{ fio }}</h3>
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Выход</button>
-    </form>
-</nav>
-        {% if username == 'admin' %}
-<div>
-    <table class="table" border="solid">
-        <thead class="thead-dark">
+{% extends 'base.html' %}
+{% block username %}
+{% if username == 'admin' %}
+{% block content %}
+<table class="table" border="solid">
+    <thead class="thead-dark">
+    <tr>
+        <th scope="col">Логин</th>
+        <th scope="col">Почта</th>
+        <th scope="col">ФИО</th>
+        <th scope="col">Роль</th>
+        <th scope="col">Дата рождения</th>
+        <th scope="col">Действие</th>
+    </tr>
+    </thead>
+    {% for list in listRequest %}
+    <form method="POST">
+        {% csrf_token %}
         <tr>
-            <th scope="col">Логин</th>
-            <th scope="col">Почта</th>
-            <th scope="col">ФИО</th>
-            <th scope="col">Роль</th>
-            <th scope="col">Дата рождения</th>
-            <th scope="col">Действие</th>
+            <td> <input type="text" value="{{ list.username }}" id="list.username" name="list.username"> </td>
+            <td> <input type="text" value="{{ list.mail }}" id="list.mail" name="list.mail"> </td>
+            <td> <input type="text" value="{{ list.fio }}" id="list.fio" name=list.fio"> </td>
+            <td>
+                <select name="menu" size="1">
+                    <option value="kommission" selected="selected"> Член комиссии</option>
+                    <option value="secretar"> Секретарь </option>
+                    <option value="third">Третья позиция</option>
+                    <option value="fourth">Четвертая позиция</option>
+            </td>
+            </select>
+            <td> <input type="text"  value="{{ list.dateb }}" id="list.dateb" name="list.dateb"> </td>
+            <td>
+                <input type="submit" class="btn btn-success" VALUE="Принять" name="ACCEPT {{ list.id }}&">
+                <input type="submit" class="btn btn-danger p" VALUE="Отказать" name="DELETE {{ list.id }}">
+            </td>
         </tr>
-        </thead>
-        {% for list in listRequest %}
-        <form method="POST">
-            {% csrf_token %}
-                    <tr>
-                        <td> <input type="text" value="{{ list.username }}" id="list.username" name="list.username"> </td>
-                        <td> <input type="text" value="{{ list.mail }}" id="list.mail" name="list.mail"> </td>
-                        <td> <input type="text" value="{{ list.fio }}" id="list.fio" name=list.fio"> </td>
-                        <td>
-                            <select name="menu" size="1">
-                                <option value="kommission" selected="selected"> Член комиссии</option>
-                                <option value="secretar"> Секретарь </option>
-                                <option value="third">Третья позиция</option>
-                                <option value="fourth">Четвертая позиция</option>
-                        </td>
-                        </select>
-                        <td> <input type="text"  value="{{ list.dateb }}" id="list.dateb" name="list.dateb"> </td>
-                        <td>
+    </form>
+    {% endfor %}
 
-                            <input type="submit" class="btn btn-success" VALUE="Принять" name="ACCEPT {{ list.id }}&">
-                            <input type="submit" class="btn btn-danger p" VALUE="Отказать" name="DELETE {{ list.id }}">
-                        </td>
-                    </tr>
-            </form>
-            {% endfor %}
-
-    </table>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</table>
+{% endblock %}
 {% endif %}
-</body>
-</html>
+{% endblock %}

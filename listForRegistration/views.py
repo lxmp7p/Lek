@@ -32,24 +32,24 @@ def listForRegistrationPage(request):
         action_re = re.findall(r'ACCEPT|DELETE', str(request.body)) #Получение имени нажатой кнопки через регулярку
         role = re.findall(r'kommission|secretar', str(request.body)) #Получение роли через регулярку
         i_accept = re.findall(r'ACCEPT+(......*=)', str(request.body))  # Получение id записи через регулярку
-        i_delete = re.findall(r'DELETE+(....*=)', str(request.body))  # Получение id записи через регулярку
+        i_delete = re.findall(r'DELETE+(..*=)', str(request.body))  # Получение id записи через регулярку
         object_accept = 0
         object_delete = 0
         role_id = 0
-        print(r'ID Удалить: ', i_delete, 'ID Сохранить', i_accept)
+        #print(r'ID Удалить: ', i_delete, 'ID Сохранить', i_accept)
         for a in i_accept:
             i_accept = a
         for d in i_delete:
             i_delete = d
-        print(i_delete)
-        print(i_accept)
+        #print(i_delete)
+        #print(i_accept)
         if i_accept:
             object_accept = i_accept[1:-4]
             object_accept = int(object_accept)
         if i_delete:
             object_delete = i_delete[1:-1]
             object_delete = int(object_delete)
-        print(r'ID Удалить: ', object_delete, 'ID Сохранить', object_accept)
+        #print(r'ID Удалить: ', object_delete, 'ID Сохранить', object_accept)
         action = ''
         for i in action_re:
             action = i
@@ -98,7 +98,7 @@ def listForRegistrationPage(request):
     else:
         form = RegisterForm()
     listRequest = models.listRegisterRequest.objects.all()
-    print(request.user.username)
+    print("юзер", request.user.username)
     return render(request, 'listForRegistration/listForRegistrationPage.html', {'username': request.user.username, 'fio': request.user.fio, 'listRequest': listRequest})
 
 

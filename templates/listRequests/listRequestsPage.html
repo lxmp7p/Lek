@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block username %}
+{% if username == 'admin' %}
+{% block content %}
+<table class="table" border="solid">
+    <thead class="thead-dark">
+    <tr>
+        <th scope="col">Владелец</th>
+        <th scope="col">Дата отправления</th>
+        <th class="text-center" scope="col">Файл</th>
+        <th class="text-center" scope="col">Действие</th>
+    </tr>
+    </thead>
+    {% for list in listRequest %}
+    <form method="POST">
+        {% csrf_token %}
+        <tr>
+            <td> <input type="text" value="{{ list.owner_fio }}" id="list.fio" name="list.fio"> </td>
+            <td> <input type="text" value="{{ list.uploaded_at }}" id="list.mail" name="list.mail"> </td>
+            <td class="text-center"><button type="button" class="btn btn-warning" onclick="window.location.href = '{{ MEDIA_URL }}/documents/{{ list.document }}'">Скачать</button></td>
+            <td class="text-center">
+                <input type="submit" class="btn btn-success" VALUE="Принять" name="ACCEPT {{ list.id }}&">
+                <input type="submit" class="btn btn-danger p" VALUE="Отказать" name="DELETE {{ list.id }}">
+            </td>
+        </tr>
+    </form>
+    {% endfor %}
+
+</table>
+{% endblock %}
+{% endif %}
+{% endblock %}

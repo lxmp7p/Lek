@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'login.apps.LoginConfig',
     'registration.apps.RegistrationConfig',
     'listForRegistration.apps.ListForRegistrationConfig',
+    'createRequest.apps.CreaterequestConfig',
+    'listRequests.apps.ListrequestsConfig',
 ]
 
 MIDDLEWARE = [
@@ -57,8 +59,7 @@ ROOT_URLCONF = 'Lek.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'login/../templates')]
-        ,
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -127,3 +128,6 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "Lek/static")
 ]
 AUTH_USER_MODEL = 'listForRegistration.registeredUsers'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, "documents/")
+MEDIA_URL = '/documents/'
