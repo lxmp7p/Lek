@@ -99,6 +99,6 @@ def listForRegistrationPage(request):
         form = RegisterForm()
     listRequest = models.listRegisterRequest.objects.all()
     print("юзер", request.user.username)
-    return render(request, 'listForRegistration/listForRegistrationPage.html', {'username': request.user.username, 'fio': request.user.fio, 'listRequest': listRequest})
+    return render(request, 'listForRegistration/listForRegistrationPage.html', {'username': request.user.username, 'role_id': request.user.role_id, 'fio': request.user.fio, 'listRequest': listRequest})
 
 

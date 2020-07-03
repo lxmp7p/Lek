@@ -33,6 +33,7 @@ def create_request(request):
     return render(request, 'createRequest/createRequestPage.html', {
         'form': form,
         'username': request.user.username,
+        'role_id': request.user.role_id,
         'fio': request.user.fio,
     })
     print(request.user.username)

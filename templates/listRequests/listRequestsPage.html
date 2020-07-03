@@ -1,6 +1,4 @@
 {% extends 'base.html' %}
-{% block username %}
-{% if username == 'admin' %}
 {% block content %}
 <table class="table" border="solid">
     <thead class="thead-dark">
@@ -27,6 +25,4 @@
     {% endfor %}
 
 </table>
-{% endblock %}
-{% endif %}
 {% endblock %}

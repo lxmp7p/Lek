@@ -26,6 +26,7 @@ from django.conf import settings
 from login.views import *
 from registration.views import *
 from listForRegistration.views import *
+from personalProfile.views import *
 
 urlpatterns = [
     path('', include('login.urls')),
@@ -35,4 +36,5 @@ urlpatterns = [
     path('createRequest/', include('createRequest.urls')),
     path('listRequests/', include('listRequests.urls')),
     path('logout/', views.LogoutView.as_view(next_page='/'), name='logout'),
+    path('profile/', include('personalProfile.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -6,4 +6,4 @@ from createRequest import models
 
 def getListRequests(request):
     listRequests = models.DocRequestList.objects.all()
-    return render(request, 'listRequests/listRequestsPage.html', {'username': request.user.username, 'fio': request.user.fio, 'listRequest': listRequests, })
+    return render(request, 'listRequests/listRequestsPage.html', {'username': request.user.username, 'fio': request.user.fio, 'role_id': request.user.role_id, 'listRequest': listRequests, })

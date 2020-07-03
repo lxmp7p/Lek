@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'listForRegistration.apps.ListForRegistrationConfig',
     'createRequest.apps.CreaterequestConfig',
     'listRequests.apps.ListrequestsConfig',
+    'personalProfile.apps.PersonalprofileConfig',
 ]
 
 MIDDLEWARE = [

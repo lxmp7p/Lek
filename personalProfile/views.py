@@ -28,7 +28,8 @@ def get_profile(request):
     form = userInfo()
     content = {
         'username': request.user.username,
-        'role_id': request.user.role_id,'fio': request.user.fio,
+        'role_id': request.user.role_id,
+        'fio': request.user.fio,
         'form': form,
     }
     return render(request, 'profile/profilePage.html', content )
