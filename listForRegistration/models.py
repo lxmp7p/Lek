@@ -17,6 +17,9 @@ class registeredUsers(AbstractUser):
     is_staff = models.CharField(max_length=20)
     is_active = models.CharField(max_length=20)
     date_joined = models.CharField(max_length=20)
+    dolzhnost = models.CharField(max_length=20)
+    num = models.CharField(max_length=20)
+    place_work = models.CharField(max_length=20)
 
 class Role(models.Model):
     role = models.CharField(max_length=30, db_index=True, verbose_name='Наименование роли ')

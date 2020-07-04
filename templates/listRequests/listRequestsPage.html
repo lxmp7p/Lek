@@ -9,7 +9,7 @@
         <th class="text-center" scope="col">Действие</th>
     </tr>
     </thead>
-    {% for list in listRequest %}
+    {% for list in listRequest reversed %}
     <form method="POST">
         {% csrf_token %}
         <tr>

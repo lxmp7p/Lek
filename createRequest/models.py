@@ -7,3 +7,5 @@ class DocRequestList(models.Model):
     uploaded_at = models.DateTimeField(auto_now_add=True)
     owner = models.CharField(max_length=20, blank=True)
     owner_fio = models.CharField(max_length=20, blank=True)
+    version = models.CharField(max_length=20, blank=True)
+    date = models.DateField(max_length=20, blank=True)
