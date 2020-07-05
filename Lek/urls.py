@@ -27,6 +27,7 @@ from login.views import *
 from registration.views import *
 from listForRegistration.views import *
 from personalProfile.views import *
+from infoRequest.views import *
 
 urlpatterns = [
     path('', include('login.urls')),
@@ -37,4 +38,5 @@ urlpatterns = [
     path('listRequests/', include('listRequests.urls')),
     path('logout/', views.LogoutView.as_view(next_page='/'), name='logout'),
     path('profile/', include('personalProfile.urls')),
+    path('infoRequest/<int:idRequest>/', include("infoRequest.urls")),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

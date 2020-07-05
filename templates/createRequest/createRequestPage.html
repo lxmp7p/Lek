@@ -6,6 +6,28 @@
             <div class="wrap-login100 p-t-85 p-b-20">
                 <form class="login100-form validate-form" method="post" enctype="multipart/form-data">
                     {% csrf_token %}
+
+                    <div class="page-full" style="height: 100vh;">
+                    <div class="wrap-input100 validate-input m-b-35" data-validate = "Enter num">
+						<label for="{{ form.description.id_for_label }}"></label>
+						<br>
+						{{ form.description }}
+						<span class="focus-input100" data-placeholder="Введите название исследования"></span>
+						<div class='invalid-feedback'>Введите название исследования</div>
+							{{ form.description.errors }}
+					</div>
+                        <div class="container-login100-form-btn">
+                        <button class="login100-form-btn" type="button" onclick="location.href = `#marker`">
+                            Далее
+                        </button>
+                    </div>
+</div>
+
+
+
+
+<div id="marker"></div>
+<div class="page-full" style="height: 100vh;">
                     <span class="login100-form-title p-b-70" method="POST">
 						Выберите NAME
 					</span>
@@ -60,7 +82,7 @@
     </div>
 </div>
 
-
+    </div>
 
 
 
@@ -115,15 +137,6 @@
 
 
 
-                <div class="container-form-btn" name="_fast">
-                        <button class="login100-form btn btn-danger" type="button" onclick='document.getElementById("id_status").value = "fast";'>
-                            Срочное
-                        </button>
-                        <button class="login100-form btn btn-warning" type="button" onclick='document.getElementById("id_status").value = "slow";'>
-                            Отложенное
-                        </button>
-                        </div>
-                    <br>
                     <div class="container-login100-form-btn" name="_fast">
                         <button class="login100-form-btn" type="submit" >
                             Отправить
@@ -135,7 +148,8 @@
 
     </div>
 </div>
-                    <div class="wrap-input100 validate-input m-b-35" data-validate = "Enter date" style="visibility: hidden;">
+    {{ form.status }}
+                    <div class="id-status" data-validate = "Enter date" style="visibility: hidden;">
 						<label for="{{ form.status.id_for_label }}"></label>
 						<br>
                         {{ form.status }}

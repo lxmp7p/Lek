@@ -6,5 +6,5 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.conf import settings
 
 urlpatterns = [
-    path('', getListRequests),
+    path('', getListRequests, name='listRequests'),
 ]
