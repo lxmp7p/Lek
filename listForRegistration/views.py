@@ -104,7 +104,7 @@ def listForRegistrationPage(request):
                                                     )
                     print(password)
                     user.save()
-                    #models.listRegisterRequest.objects.filter(id=i[0]).delete() #Удаляем заявку
+                    models.listRegisterRequest.objects.filter(id=i[0]).delete() #Удаляем заявку
 
         elif action=="DELETE":
             for i in models.listRegisterRequest.objects.values_list(): # Пробегаем по таблице с заявками
