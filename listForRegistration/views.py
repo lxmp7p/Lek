@@ -27,10 +27,25 @@ def random_password():
 
 def listForRegistrationPage(request):
     if request.method == 'POST':
+        roleList = [
+            {"role": "pretsedatel", "id": 2},
+            {"role": "administrator_ucherezdenuya", "id": 3},
+            {"role": "zakazchik_issledovaniya", "id": 4},
+            {"role": "konsyltant", "id": 5},
+            {"role": "main_issledovatel", "id": 6},
+            {"role": "issledovatel", "id": 7},
+            {"role": "aspirant_soiskatel", "id": 8},
+            {"role": "naychniy_rukovoditel", "id": 9},
+            {"role": "secretar", "id": 10},
+            {"role": "kommision", "id": 11},
+        ]
         form = RegisterForm(request.POST)
         print(r'cccc!!!!!!', request.body)
         action_re = re.findall(r'ACCEPT|DELETE', str(request.body)) #Получение имени нажатой кнопки через регулярку
-        role = re.findall(r'kommission|secretar', str(request.body)) #Получение роли через регулярку
+        for i in roleList:
+            if re.findall(i.get('role'),str(request.body)):
+                role = re.findall(i.get('role'),str(request.body))  # Получение роли через регулярку
+                break
         i_accept = re.findall(r'ACCEPT+(......*=)', str(request.body))  # Получение id записи через регулярку
         i_delete = re.findall(r'DELETE+(..*=)', str(request.body))  # Получение id записи через регулярку
         object_accept = 0
@@ -60,13 +75,13 @@ def listForRegistrationPage(request):
         # В object хранится значение id нажатой кнопки типа int
         # В action хранится значение нажатой кнопки типа str (ACCEPT/DELETE)
         print(r"Роль", role)
-
-        if role == "kommission":
-            role_id = 1
-        elif role == "secretar":
-            role_id = 2
+        for r in roleList:
+            if role == r.get('role'):
+                role_id = r.get('id')
+                break
         print("Роль")
         print(role_id)
+        print(request.body)
         if action=="ACCEPT":
             for i in models.listRegisterRequest.objects.values_list(): # Пробегаем по таблице с заявками
                 if i[0] == object_accept:
@@ -89,7 +104,7 @@ def listForRegistrationPage(request):
                                                     )
                     print(password)
                     user.save()
-                    models.listRegisterRequest.objects.filter(id=i[0]).delete() #Удаляем заявку
+                    #models.listRegisterRequest.objects.filter(id=i[0]).delete() #Удаляем заявку
 
         elif action=="DELETE":
             for i in models.listRegisterRequest.objects.values_list(): # Пробегаем по таблице с заявками

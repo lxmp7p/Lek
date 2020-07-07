@@ -1,0 +1,13 @@
+import base64
+from Crypto.Cipher import DES
+
+enc = 'MK1W0ajASzBvHo+hbnfIy+oUh0gnnRZbntjU0muf+Ts='
+db = base64.decodebytes(enc.encode())
+for i in range(100000, 999999):
+    des = DES.new(str(i) + '00', DES.MODE_ECB)
+    dc = des.decrypt(db)
+    try:
+        if ('=' in dc.decode()):
+            print(dc)
+    except:
+        pass

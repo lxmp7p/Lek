@@ -32,8 +32,8 @@
 [ RESTYLE TAG ]*/
 
 * {
-	margin: 0px; 
-	padding: 0px; 
+	margin: 0px;
+	padding: 0px;
 	box-sizing: border-box;
 }
 
@@ -159,7 +159,7 @@ iframe {
 }
 
 .container-login100 {
-  width: 100%;  
+  width: 100%;
   min-height: 100vh;
   display: -webkit-box;
   display: -webkit-flex;
@@ -170,7 +170,7 @@ iframe {
   justify-content: center;
   align-items: center;
   padding: 15px;
-  background: #fff;  
+  background: #fff;
 }
 
 .wrap-login100 {
@@ -230,7 +230,7 @@ iframe {
   padding: 0 5px;
 }
 
-/*---------------------------------------------*/ 
+/*---------------------------------------------*/
 .focus-input100 {
   position: absolute;
   display: block;
@@ -268,7 +268,7 @@ iframe {
   display: block;
   width: 100%;
   position: absolute;
-  top: -15px;
+  top: 15px;
   left: 0px;
   padding-left: 5px;
 
@@ -450,58 +450,3 @@ iframe {
 .html {
   width: 1100px;
 }
-
-
-/*//////////////////////////////////////////////////////////////////
-[ Login more ]*/
-.login-more li {
-  position: relative;
-  padding-left: 16px;
-}
-
-.login-more li::before {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background-color: #cccccc;
-  top: 45%;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  transform: translateY(-50%);
-  left: 0;
-}
-
-.html {
-  width: 1100px;
-}
-
-
-.hellonigga {
-     border-width:1;
-    border-color: rgb(190,190,190);
-    border-style: solid;
-    color:red;
-}
-
-.example-2 .btn-tertiary{color:#555;padding:0;line-height:40px;width:300px;margin:auto;display:block;border:2px solid #555}
-.example-2 .btn-tertiary:hover,.example-2 .btn-tertiary:focus{color:#888;border-color:#888}
-.example-2 .input-file{width:.1px;height:.1px;opacity:0;overflow:hidden;position:absolute;z-index:-1}
-.example-2 .input-file + .js-labelFile{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;padding:0 10px;cursor:pointer}
-.example-2 .input-file + .js-labelFile .icon:before{content:"\f093"}
-.example-2 .input-file + .js-labelFile.has-file .icon:before{content:"\f00c";color:#5AAC7B}
-
-
-@import "https://fonts.googleapis.com/css?family=Varela+Round";
-.example-3{box-sizing:border-box}
-.example-3{position:relative;font:1em/1.6 "Varela Round",Arial,sans-serif;color:#999;font-weight:400;max-width:25em;padding:1em;}
-.example-3 h2{font-weight:400}
-.example-3 .filupp > input[type="file"]{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
-.example-3 .filupp{position:relative;background:#242424;display:block;padding:1em;font-size:1em;width:100%;height:3.5em;color:#fff;cursor:pointer;box-shadow:0 1px 3px #0b0b0b}
-.example-3 .filupp:before{content:"";position:absolute;top:1.5em;right:.75em;width:2em;height:1.25em;border:3px solid #dd4040;border-top:0;text-align:center}
-.example-3 .filupp:after{content:"\f178";font-family: FontAwesome;-webkit-transform:rotate(-90deg);-moz-transform:rotate(-90deg);-ms-transform:rotate(-90deg);-o-transform:rotate(-90deg);transform:rotate(-90deg);position:absolute;top:.65em;right:.45em;font-size:2em;color:#dd4040;line-height:0}
-.example-3 .filupp-file-name{width:75%;display:inline-block;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal}
