@@ -16,7 +16,7 @@ def get_profile(request):
     if request.method == 'POST':
         form = userInfo (request.POST)
         if form.is_valid():
-            person.num = request.POST.get("num")
+            person.dateb = request.POST.get("dateb")
             person.dolzhnost = request.POST.get("dolzhnost")
             person.place_work = request.POST.get("place_work")
             person.password = request.POST.get("password")

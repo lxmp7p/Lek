@@ -7,7 +7,7 @@
         <th scope="col">Почта</th>
         <th scope="col">ФИО</th>
         <th scope="col">Роль</th>
-        <th scope="col">Дата рождения</th>
+        <th scope="col">Номер</th>
         <th scope="col">Действие</th>
     </tr>
     </thead>
@@ -32,7 +32,7 @@
                     <option value="naychniy_rukovoditel">Научый руководитель</option>
             </td>
             </select>
-            <td> <input type="text"  value="{{ list.dateb }}" id="list.dateb" name="list.dateb"> </td>
+            <td> <input type="text"  value="{{ list.num }}" id="list.num" name="list.num"> </td>
             <td>
                 <input type="submit" class="btn btn-success" VALUE="Принять" name="ACCEPT {{ list.id }}&">
                 <input type="submit" class="btn btn-danger p" VALUE="Отказать" name="DELETE {{ list.id }}">

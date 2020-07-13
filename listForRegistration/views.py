@@ -90,7 +90,7 @@ def listForRegistrationPage(request):
                     user = User.objects.create_user(username=req[1],
                                                     email=req[2],
                                                     fio=req[3],
-                                                    dateb=req[4],
+                                                    num=req[4],
                                                     password=password,
                                                     role_id=role_id,
                                                     username_field=req[1],
