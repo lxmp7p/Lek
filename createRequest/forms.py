@@ -1,14 +1,23 @@
 from django import forms
-from .models import DocRequestList
+from .models import DocRequestListMki
 from django.shortcuts import render, redirect
 from django.contrib import auth
 from django.http import HttpResponse, request
 
-class DocRequestListForm(forms.ModelForm):
+class DocRequestListMkiForm(forms.ModelForm):
     class Meta:
-        model = DocRequestList
+        model = DocRequestListMki
         fields = ('description', 'document', 'owner', 'status',
-                  'zagolovok','num_zagolovok','date_zagolovok',
                   'podpis','num_podpis','date_podpis',
-                  'test','num_test','date_test',
+                  'test','num_test','date_test','description','document',
+                  'owner','owner_fio','status','main_researcher',
+                  'list_members','ver_bio','accept_research',
+                  'accept_research_version','accept_research_date',
+                  'protocol_research','protocol_research_version',
+                  'protocol_research_date','form_inf','form_inf_version',
+                  'form_inf_date','cast_researcher','cast_researcher_version',
+                  'cast_researcher_date','advertising','write_objects',
+                  'name_another_doc','another_doc','another_doc_version',
+                  'another_doc_date', 'contract', 'contract_date',
                   )
+

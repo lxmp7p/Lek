@@ -20,12 +20,12 @@ def get_info_reguest(request, idRequest):
         if (move == 'ACCEPT'):
             pass
         if (move == 'DELETE'):
-            models.DocRequestList.objects.filter(id=idRequest).delete()
+            models.DocRequestListMki.objects.filter(id=idRequest).delete()
         print(request.body, move)
         return redirect('../../listRequests/')
     else:
-        form = forms.DocRequestListForm()
-        infoRequest = models.DocRequestList.objects.filter(id=idRequest)
+        form = forms.DocRequestListMkiForm()
+        infoRequest = models.DocRequestListMki.objects.filter(id=idRequest)
         content = {
                 'form': form,
                 'username': request.user.username,

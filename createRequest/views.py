@@ -4,20 +4,21 @@ from django.http import HttpResponse
 
 from django.contrib.auth.models import User
 # Create your views here.
-from .models import DocRequestList as File
+from .models import DocRequestListMki as File
 from django.template.context_processors import csrf
 import hashlib
 import listForRegistration
 from django.contrib.auth import authenticate
-from .forms import DocRequestListForm
+from .forms import DocRequestListMkiForm
 from django.forms.formsets import formset_factory
 # Create your views here.
 
-def create_request(request):
-    ArticleFormSet = formset_factory(DocRequestListForm)
+def create_request_mki(request):
+    ArticleFormSet = formset_factory(DocRequestListMkiForm)
     formset = ArticleFormSet()
+    print(formset)
     if request.method == 'POST':
-        form = DocRequestListForm(request.POST, request.FILES)
+        form = DocRequestListMkiForm(request.POST, request.FILES)
         form.owner = 'test'
         if form.is_valid():
             form.cleaned_data['owner'] = 'test'
@@ -27,9 +28,16 @@ def create_request(request):
             personal.save()
             return redirect('../../createRequest/')
     else:
-        form = DocRequestListForm()
-    return render(request, 'createRequest/createRequestPage.html', {
+        form = DocRequestListMkiForm()
+    return render(request, 'createRequest/createRequestPageMki.html', {
         'form': form,
+        'username': request.user.username,
+        'role_id': request.user.role_id,
+        'fio': request.user.fio,
+    })
+
+def create_request(request):
+    return render(request, 'createRequest/selectRequestType.html', {
         'username': request.user.username,
         'role_id': request.user.role_id,
         'fio': request.user.fio,

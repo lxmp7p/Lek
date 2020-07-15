@@ -1,0 +1,546 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container text-center">
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100 p-t-85 p-b-20">
+                <form class="login100-form validate-form" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="page-full" style="height: 100vh;">
+                    <div class="wrap-input100 validate-input m-b-35" data-validate = "Enter num">
+						<label for="{{ form.description.id_for_label }}"></label>
+						<br>
+						{{ form.description }}
+						<span class="focus-input100" data-placeholder="Введите название исследования"></span>
+						<div class='invalid-feedback'>Введите название исследования</div>
+							{{ form.description.errors }}
+					</div>
+                        <div class="container-login100-form-btn">
+                        <button class="login100-form-btn" type="button" onclick="location.href = `#marker`">
+                            Далее
+                        </button>
+                    </div>
+</div>
+
+
+
+
+<div id="marker"></div>
+<div class="page-full" style="height: 100vh;">
+                    <span class="login100-form-title p-b-70" method="POST">
+						Загрузите список членов комиссии
+					</span>
+                    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+                    <div class="wrap-input100 validate-input m-b-50" data-validate="Files">
+                        <label for="{{ form.list_members.id_for_label }}"></label>
+                        <br>
+                        <div class="example-2">
+                            <div class="form-group">
+                                <input type="file" name="file" id="file" class="input-file" multiple>
+                                <label for="file" class="btn btn-tertiary js-labelFile">
+                                    <i class="icon fa fa-check"></i>
+                                    <span class="js-fileName"></span>
+                                    {{ form.list_members }}
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <br><br>
+{{ form.owner }}
+                    <div class="container-login100-form-btn">
+                        <button class="login100-form-btn" type="button" onclick="location.href = `#marker-1`">
+                            Далее
+                        </button>
+                    </div>
+                     <br>
+            </div></div></div></div>
+  <div class="page-full" style="height: 100vh;">
+                    <div class="wrap-input100 validate-input m-b-35" data-validate = "Enter num">
+						<label for="{{ form.ver_bio.id_for_label }}"></label>
+						<br>
+						{{ form.ver_bio }}
+						<span class="focus-input100" data-placeholder="Выберите версию биографии(список)"></span>
+						<div class='invalid-feedback'>Выберите версию биографии</div>
+							{{ form.ver_bio.errors }}
+					</div>
+                        <div class="container-login100-form-btn">
+                        <button class="login100-form-btn" type="button" onclick="location.href = `#marker`">
+                            Далее
+                        </button>
+                    </div>
+</div>
+
+    <div id="marker-1"></div>
+    <form class="container text-center">
+        <div class="limiter">
+            <div class="container-login100">
+                <div class="wrap-login100 p-t-85 p-b-20">
+                    <span class="login100-form-title p-b-70" method="POST">
+						Загрузите разрешение МЗ РФ
+					</span>
+                    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+                    <div class="wrap-input100 validate-input m-b-50" data-validate="Files">
+                        <label for="{{ form.accept_research.id_for_label }}"></label>
+                        <br>
+                        <div class="example-2">
+                            <div class="form-group">
+                                <input type="file" name="file" id="file" class="input-file" multiple>
+                                <label for="file" class="btn btn-tertiary js-labelFile">
+                                    <i class="icon fa fa-check"></i>
+                                    <span class="js-fileName"></span>
+                                    {{ form.accept_research }}
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="wrap-input100 validate-input m-b-35" data-validate = "Enter num">
+                        <label for="{{ form.accept_research_version.id_for_label }}"></label>
+                        <br>
+                        {{ form.accept_research_version }}
+                        <span class="focus-input100" data-placeholder="Введите версию документа"></span>
+                        <div class='invalid-feedback'>Введите вересию документа</div>
+                        {{ form.accept_research_version.errors }}
+                    </div>
+
+                    <div class="wrap-input100 validate-input m-b-35" data-validate = "Enter date">
+                        <label for="{{ form.accept_research_date.id_for_label }}"></label>
+                        <br>
+                        {{ form.accept_research_date }}
+                        <span class="focus-input100" data-placeholder="Введите дату"></span>
+                        <div class='invalid-feedback'>Введите дату</div>
+                        {{ form.accept_research_date.errors }}
+                    </div>
+
+
+                    <br><br>
+                    <br>
+                </div>
+
+
+            </div>
+        </div>
+
+            <div id="marker-2"></div>
+    <form class="container text-center">
+        <div class="limiter">
+            <div class="container-login100">
+                <div class="wrap-login100 p-t-85 p-b-20">
+                    <span class="login100-form-title p-b-70" method="POST">
+						Загрузите протокол исследования
+					</span>
+                    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+                    <div class="wrap-input100 validate-input m-b-50" data-validate="Files">
+                        <label for="{{ form.protocol_research.id_for_label }}"></label>
+                        <br>
+                        <div class="example-2">
+                            <div class="form-group">
+                                <input type="file" name="file" id="file" class="input-file" multiple>
+                                <label for="file" class="btn btn-tertiary js-labelFile">
+                                    <i class="icon fa fa-check"></i>
+                                    <span class="js-fileName"></span>
+                                    {{ form.protocol_research }}
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="wrap-input100 validate-input m-b-35" data-validate = "Enter num">
+                        <label for="{{ form.protocol_research.id_for_label }}"></label>
+                        <br>
+                        {{ form.protocol_research_version }}
+                        <span class="focus-input100" data-placeholder="Введите версию документа"></span>
+                        <div class='invalid-feedback'>Введите версию документа</div>
+                        {{ form.protocol_research.errors }}
+                    </div>
+
+                    <div class="wrap-input100 validate-input m-b-35" data-validate = "Enter date">
+                        <label for="{{ form.date_protocol_research.id_for_label }}"></label>
+                        <br>
+                        {{ form.protocol_research_date }}
+                        <span class="focus-input100" data-placeholder="Введите дату"></span>
+                        <div class='invalid-feedback'>Введите дату</div>
+                        {{ form.date_zagolovok.errors }}
+                    </div>
+
+                    <div class="container-login100-form-btn">
+                        <button class="login100-form-btn" type="button" onclick="location.href = `#marker`">
+                            Далее
+                        </button>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+                    <div id="marker-3"></div>
+    <form class="container text-center">
+        <div class="limiter">
+            <div class="container-login100">
+                <div class="wrap-login100 p-t-85 p-b-20">
+                    <span class="login100-form-title p-b-70" method="POST">
+                        Загрузите форму информированного листа
+                    </span>
+                    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+                    <div class="wrap-input100 validate-input m-b-50" data-validate="Files">
+                        <label for="{{ form.form_inf.id_for_label }}"></label>
+                        <br>
+                        <div class="example-2">
+                            <div class="form-group">
+                                <input type="file" name="file" id="file" class="input-file" multiple>
+                                <label for="file" class="btn btn-tertiary js-labelFile">
+                                    <i class="icon fa fa-check"></i>
+                                    <span class="js-fileName"></span>
+                                    {{ form.form_inf }}
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="wrap-input100 validate-input m-b-35" data-validate = "Enter num">
+                        <label for="{{ form.form_inf_version.id_for_label }}"></label>
+                        <br>
+                        {{ form.form_inf_version }}
+                        <span class="focus-input100" data-placeholder="Введите версию документа"></span>
+                        <div class='invalid-feedback'>Введите вересию документа</div>
+                        {{ form.form_inf_version.errors }}
+                    </div>
+
+                    <div class="wrap-input100 validate-input m-b-35" data-validate = "Enter date">
+                        <label for="{{ form.form_inf_date.id_for_label }}"></label>
+                        <br>
+                        {{ form.form_inf_date }}
+                        <span class="focus-input100" data-placeholder="Введите дату"></span>
+                        <div class='invalid-feedback'>Введите дату</div>
+                        {{ form.form_inf_date.errors }}
+                    </div>
+
+
+                    <br><br>
+                    <br>
+                </div>
+
+
+            </div>
+        </div>
+        <div id="marker-4"></div>
+    <form class="container text-center">
+        <div class="limiter">
+            <div class="container-login100">
+                <div class="wrap-login100 p-t-85 p-b-20">
+                    <span class="login100-form-title p-b-70" method="POST">
+                        Загрузите брошюру исследователя
+                    </span>
+                    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+                    <div class="wrap-input100 validate-input m-b-50" data-validate="Files">
+                        <label for="{{ form.cast_researcher.id_for_label }}"></label>
+                        <br>
+                        <div class="example-2">
+                            <div class="form-group">
+                                <input type="file" name="file" id="file" class="input-file" multiple>
+                                <label for="file" class="btn btn-tertiary js-labelFile">
+                                    <i class="icon fa fa-check"></i>
+                                    <span class="js-fileName"></span>
+                                    {{ form.cast_researcher }}
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="wrap-input100 validate-input m-b-35" data-validate = "Enter num">
+                        <label for="{{ form.cast_researcher_version.id_for_label }}"></label>
+                        <br>
+                        {{ form.cast_researcher_version }}
+                        <span class="focus-input100" data-placeholder="Введите версию документа"></span>
+                        <div class='invalid-feedback'>Введите вересию документа</div>
+                        {{ form.cast_researcher_version.errors }}
+                    </div>
+
+                    <div class="wrap-input100 validate-input m-b-35" data-validate = "Enter date">
+                        <label for="{{ form.cast_researcher_date.id_for_label }}"></label>
+                        <br>
+                        {{ form.cast_researcher_date }}
+                        <span class="focus-input100" data-placeholder="Введите дату"></span>
+                        <div class='invalid-feedback'>Введите дату</div>
+                        {{ form.cast_researcher_date.errors }}
+                    </div>
+
+
+                    <br><br>
+                    <br>
+                </div>
+
+
+            </div>
+        </div>
+
+
+
+        <div id="marker-5"></div>
+    <form class="container text-center">
+        <div class="limiter">
+            <div class="container-login100">
+                <div class="wrap-login100 p-t-85 p-b-20">
+                    <span class="login100-form-title p-b-70" method="POST">
+                        Загрузите договор обязательного страхования
+                    </span>
+                    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+                    <div class="wrap-input100 validate-input m-b-50" data-validate="Files">
+                        <label for="{{ form.contract.id_for_label }}"></label>
+                        <br>
+                        <div class="example-2">
+                            <div class="form-group">
+                                <input type="file" name="file" id="file" class="input-file" multiple>
+                                <label for="file" class="btn btn-tertiary js-labelFile">
+                                    <i class="icon fa fa-check"></i>
+                                    <span class="js-fileName"></span>
+                                    {{ form.contract }}
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="wrap-input100 validate-input m-b-35" data-validate = "Enter date">
+                        <label for="{{ form.contract_date.id_for_label }}"></label>
+                        <br>
+                        {{ form.contract_date }}
+                        <span class="focus-input100" data-placeholder="Введите дату"></span>
+                        <div class='invalid-feedback'>Введите дату</div>
+                        {{ form.contract_date.errors }}
+                    </div>
+
+
+                    <br><br>
+                    <br>
+                    <div class="container-login100-form-btn">
+                        <button class="login100-form-btn" type="button" onclick="location.href = `#marker-6`">
+                            Далее
+                        </button>
+                    </div>
+                     <br>
+            </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+              <div id="marker-6"></div>
+        <div class="page-full" style="height: 100vh;">
+                    <span class="login100-form-title p-b-70" method="POST">
+						Загрузите образцы рекламной продукции
+					</span>
+                    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+                    <div class="wrap-input100 validate-input m-b-50" data-validate="Files">
+                        <label for="{{ form.advertising.id_for_label }}"></label>
+                        <br>
+                        <div class="example-2">
+                            <div class="form-group">
+                                <input type="file" name="file" id="file" class="input-file" multiple>
+                                <label for="file" class="btn btn-tertiary js-labelFile">
+                                    <i class="icon fa fa-check"></i>
+                                    <span class="js-fileName"></span>
+                                    {{ form.advertising }}
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+            <div class="container-login100-form-btn">
+                        <button class="login100-form-btn" type="button" onclick="location.href = `#marker-7`">
+                            Далее
+                        </button>
+                    </div>
+                     <br>
+            </div>
+                    <br><br>
+{{ form.owner }}
+                     <br>
+            </div></div></div></div>
+
+              <div id="marker-7"></div>
+        <div class="page-full" style="height: 100vh;">
+                    <span class="login100-form-title p-b-70" method="POST">
+						Загрузите письменные материалы
+					</span>
+                    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+                    <div class="wrap-input100 validate-input m-b-50" data-validate="Files">
+                        <label for="{{ form.write_objects.id_for_label }}"></label>
+                        <br>
+                        <div class="example-2">
+                            <div class="form-group">
+                                <input type="file" name="file" id="file" class="input-file" multiple>
+                                <label for="file" class="btn btn-tertiary js-labelFile">
+                                    <i class="icon fa fa-check"></i>
+                                    <span class="js-fileName"></span>
+                                    {{ form.write_objects }}
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <br><br>
+{{ form.owner }}
+</div></div></div>
+
+        <div id="marker-8"></div>
+    <form class="container text-center">
+        <div class="limiter">
+            <div class="container-login100">
+                <div class="wrap-login100 p-t-85 p-b-20">
+                    <span class="login100-form-title p-b-70" method="POST">
+                        Загрузите дополнительные файлы
+                    </span>
+                    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+                                        <div class="wrap-input100 validate-input m-b-35" data-validate = "Enter num">
+						<label for="{{ form.name_another_doc.id_for_label }}"></label>
+						<br>
+						{{ form.name_another_doc }}
+						<span class="focus-input100" data-placeholder="Название файла"></span>
+						<div class='invalid-feedback'>Название файла</div>
+							{{ form.name_another_doc.errors }}
+					</div>
+                    <div class="wrap-input100 validate-input m-b-50" data-validate="Files">
+                        <label for="{{ form.another_doc.id_for_label }}"></label>
+                        <br>
+                        <div class="example-2">
+                            <div class="form-group">
+                                <input type="file" name="file" id="file" class="input-file" multiple>
+                                <label for="file" class="btn btn-tertiary js-labelFile">
+                                    <i class="icon fa fa-check"></i>
+                                    <span class="js-fileName"></span>
+                                    {{ form.another_doc }}
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="wrap-input100 validate-input m-b-35" data-validate = "Enter num">
+                        <label for="{{ form.another_doc_version.id_for_label }}"></label>
+                        <br>
+                        {{ form.another_doc_version }}
+                        <span class="focus-input100" data-placeholder="Введите версию документа"></span>
+                        <div class='invalid-feedback'>Введите вересию документа</div>
+                        {{ form.another_doc_version.errors }}
+                    </div>
+
+                    <div class="wrap-input100 validate-input m-b-35" data-validate = "Enter date">
+                        <label for="{{ form.another_doc_date.id_for_label }}"></label>
+                        <br>
+                        {{ form.another_doc_date }}
+                        <span class="focus-input100" data-placeholder="Введите дату"></span>
+                        <div class='invalid-feedback'>Введите дату</div>
+                        {{ form.another_doc_date.errors }}
+                    </div>
+
+
+                    <br><br>
+                    <br>
+                    <div class="container-login100-form-btn">
+                        <button class="login100-form-btn" type="button" onclick="location.href = `#marker-1`">
+                            Далее
+                        </button>
+                    </div>
+                     <br>
+            </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<form class="container text-center">
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100 p-t-85 p-b-20">
+                    <span class="login100-form-title p-b-70" method="POST">
+						Выберите NAME
+					</span>
+                    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+                    <div class="wrap-input100 validate-input m-b-50" data-validate="Files">
+                        <label for="{{ form.podpis.id_for_label }}"></label>
+                        <br>
+                        <div class="example-2">
+                            <div class="form-group">
+                                <input type="file" name="file" id="file" class="input-file" multiple>
+                                <label for="file" class="btn btn-tertiary js-labelFile">
+                                    <i class="icon fa fa-check"></i>
+                                    <span class="js-fileName"></span>
+                                    {{ form.podpis }}
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="wrap-input100 validate-input m-b-35" data-validate = "Enter num">
+						<label for="{{ form.num_podpis.id_for_label }}"></label>
+						<br>
+						{{ form.num_podpis }}
+						<span class="focus-input100" data-placeholder="Введите номер документа"></span>
+						<div class='invalid-feedback'>Введите номер документа</div>
+							{{ form.num_podpis.errors }}
+					</div>
+
+                    <div class="wrap-input100 validate-input m-b-35" data-validate = "Enter date">
+						<label for="{{ form.date_podpis.id_for_label }}"></label>
+						<br>
+						{{ form.date_podpis }}
+						<span class="focus-input100" data-placeholder="Введите дату"></span>
+						<div class='invalid-feedback'>Введите дату</div>
+							{{ form.date_zagolovok.errors }}
+					</div>
+
+
+                    <br><br>
+{{ form.owner }}
+
+
+
+                    <div class="container-login100-form-btn" name="_fast">
+                        <button class="login100-form-btn" type="submit" >
+                            Отправить
+                        </button>
+                        </div>
+                    <br>
+        </div>
+
+
+    </div>
+</div>
+    {{ form.status }}
+                    <div class="id-status" data-validate = "Enter date" style="visibility: hidden;">
+						<label for="{{ form.status.id_for_label }}"></label>
+						<br>
+                        {{ form.status }}
+						<span class="focus-input100" data-placeholder="Введите дату"></span>
+						<div class='invalid-feedback'>Введите дату</div>
+							{{ form.status.errors }}
+					</div>
+</form>
+
+{% endblock %}
