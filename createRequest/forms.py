@@ -8,8 +8,7 @@ class DocRequestListMkiForm(forms.ModelForm):
     class Meta:
         model = DocRequestListMki
         fields = ('description', 'document', 'owner', 'status',
-                  'podpis','num_podpis','date_podpis',
-                  'test','num_test','date_test','description','document',
+                  'description','document',
                   'owner','owner_fio','status','main_researcher',
                   'list_members','ver_bio','accept_research',
                   'accept_research_version','accept_research_date',

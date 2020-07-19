@@ -21,6 +21,7 @@ def get_profile(request):
             person.place_work = request.POST.get("place_work")
             person.password = request.POST.get("password")
             person.set_password(person.password)
+            person.is_active = 'True'
             print(request.POST.get("password"))
             person.save()
             #registrationModels.listRegisterRequest.objects.create(**form.cleaned_data)

@@ -20,6 +20,7 @@ def create_request_mki(request):
     if request.method == 'POST':
         form = DocRequestListMkiForm(request.POST, request.FILES)
         form.owner = 'test'
+        print(form.media)
         if form.is_valid():
             form.cleaned_data['owner'] = 'test'
             personal = form.save(commit=False)
@@ -27,6 +28,8 @@ def create_request_mki(request):
             personal.owner_fio = request.user.fio
             personal.save()
             return redirect('../../createRequest/')
+        else:
+            print("ошибки формы \n", form.errors)
     else:
         form = DocRequestListMkiForm()
     return render(request, 'createRequest/createRequestPageMki.html', {

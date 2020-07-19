@@ -17,6 +17,7 @@ from django.template.context_processors import csrf
 import hashlib
 from django.contrib.auth import authenticate
 from datetime import date
+from django.core.mail import send_mail
 
 def random_password():
     length = 8
@@ -79,9 +80,6 @@ def listForRegistrationPage(request):
             if role == r.get('role'):
                 role_id = r.get('id')
                 break
-        print("Роль")
-        print(role_id)
-        print(request.body)
         if action=="ACCEPT":
             for i in models.listRegisterRequest.objects.values_list(): # Пробегаем по таблице с заявками
                 if i[0] == object_accept:
@@ -104,6 +102,8 @@ def listForRegistrationPage(request):
                                                     )
                     print(password)
                     user.save()
+                    send_mail('Регистрация на портале','Ваш пароль для входа: ' + password, 'nii.oncolog.lek@gmail.com',
+                              ['lxmp7p@yandex.ru'], fail_silently=False)
                     models.listRegisterRequest.objects.filter(id=i[0]).delete() #Удаляем заявку
 
         elif action=="DELETE":
@@ -113,7 +113,6 @@ def listForRegistrationPage(request):
     else:
         form = RegisterForm()
     listRequest = models.listRegisterRequest.objects.all()
-    print("юзер", request.user.username)
     return render(request, 'listForRegistration/listForRegistrationPage.html', {'username': request.user.username, 'role_id': request.user.role_id, 'fio': request.user.fio, 'listRequest': listRequest})
 
 

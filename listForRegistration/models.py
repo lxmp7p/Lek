@@ -20,6 +20,7 @@ class registeredUsers(AbstractUser):
     dateb = models.CharField(max_length=30)
     dolzhnost = models.CharField(max_length=30)
     place_work = models.CharField(max_length=30)
+    auth_code = models.CharField(max_length=20)
 
 class Role(models.Model):
     role = models.CharField(max_length=30, db_index=True, verbose_name='Наименование роли ')

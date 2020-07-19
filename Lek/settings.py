@@ -133,3 +133,10 @@ AUTH_USER_MODEL = 'listForRegistration.registeredUsers'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, "documents/")
 MEDIA_URL = '/documents/'
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 465
+EMAIL_HOST_USER = 'nii.oncolog.lek@gmail.com'
+EMAIL_HOST_PASSWORD = 'HTjava77585'
+EMAIL_USE_TLS = False
+EMAIL_USE_SSL = True
