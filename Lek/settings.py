@@ -137,6 +137,6 @@ MEDIA_URL = '/documents/'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 465
 EMAIL_HOST_USER = 'nii.oncolog.lek@gmail.com'
-EMAIL_HOST_PASSWORD = 'HTjava77585'
+EMAIL_HOST_PASSWORD = 'None'
 EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True

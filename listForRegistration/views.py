@@ -97,7 +97,7 @@ def listForRegistrationPage(request):
                                                     first_name='None',
                                                     last_name='None',
                                                     is_staff='False',
-                                                    is_active='True',
+                                                    is_active='False',
                                                     date_joined=date.today(),
                                                     )
                     print(password)
