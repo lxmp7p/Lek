@@ -3,52 +3,73 @@
 <table class="table" border="solid">
     <thead class="thead-dark">
     <tr>
+        <th scope="col">Тип документа</th>
         <th scope="col">Номер документа</th>
         <th scope="col">Дата</th>
         <th scope="col">Просмотр</th>
     </tr>
     </thead>
     {% for list in infoRequest %}
+    <h2>Главный исследователь {{ list.main_researcher }}</h2>
     <form method="POST">
         {% csrf_token %}
         <tr>
-            <td> <input type="text" value="{{ list.num_podpis }}" id="list.num_podpis" name="list.mail"> </td>
-            <td> <input type="text" value="{{ list.date_podpis }}" id="list.date_podpis" name="list.mail"> </td>
-            <td class="text-center"><button type="button" class="btn btn-warning" onclick="window.location.href = '../../{{ MEDIA_URL }}documents/{{ list.podpis }}'">Открыть</button></td>
+            <td> <input type="text" value="Cписок участников" id="list.list_members" name="list.list_members"> </td>
+            <td> <input type="text" value="-"</td>
+            <td> <input type="text" value="-"</td>
+            <td class="text-center"><button type="button" class="btn btn-warning" onclick="window.location.href = '../../{{ MEDIA_URL }}documents/{{ list.list_members }}'">Открыть</button></td>
         </tr>
-    </form>
-    {% endfor %}
-
-
-    {% for list in infoRequest %}
-    <form method="POST">
-        {% csrf_token %}
         <tr>
-            <td> <input type="text" value="{{ list.num_zagolovok }}" id="list.num_zagolovok" name="list.mail"> </td>
-            <td> <input type="text" value="{{ list.date_zagolovok }}" id="list.date_zagolovok" name="list.mail"> </td>
-            <td class="text-center"><button type="button" class="btn btn-warning" onclick="window.location.href = '../../{{ MEDIA_URL }}documents/{{ list.zagolovok }}'">Открыть</button></td>
+            <td> <input type="text" value="Разрешение МЗ РФ" id="list.accept_research" name="list.accept_research"> </td>
+            <td> <input type="text" value="{{ list.accept_research_version }}"</td>
+            <td> <input type="text" value="{{ list.accept_research_date }}"</td>
+            <td class="text-center"><button type="button" class="btn btn-warning" onclick="window.location.href = '../../{{ MEDIA_URL }}documents/{{ list.accept_research }}'">Открыть</button></td>
         </tr>
-    </form>
-    {% endfor %}
-
-    {% for list in infoRequest %}
-    <form method="POST">
-        {% csrf_token %}
         <tr>
-            <td> <input type="text" value="{{ list.num_test }}" id="list.num_test" name="list.num_test"> </td>
-            <td> <input type="text" value="{{ list.date_test }}" id="list.date_test" name="list.date_test"> </td>
-            {% if list.test  %}
-            <td class="text-center"><button type="button" class="btn btn-warning" onclick="window.location.href = '../../{{ MEDIA_URL }}documents/{{ list.test }}'">Открыть</button></td>
-            {% else %}
-            <td class="text-center"> <label class="text-danger">Отсутствует </label></td>
-            {% endif %}
-
+            <td> <input type="text" value="Протокол исследования" id="list.protocol_research" name="list.accept_research"> </td>
+            <td> <input type="text" value="{{ list.protocol_research_version }}"</td>
+            <td> <input type="text" value="{{ list.protocol_research_date }}"</td>
+            <td class="text-center"><button type="button" class="btn btn-warning" onclick="window.location.href = '../../{{ MEDIA_URL }}documents/{{ list.protocol_research }}'">Открыть</button></td>
         </tr>
-
-
+        <tr>
+            <td> <input type="text" value="Форма инф листка" id="list.form_inf"> </td>
+            <td> <input type="text" value="{{ list.form_inf_version }}"</td>
+            <td> <input type="text" value="{{ list.form_inf_date }}"</td>
+            <td class="text-center"><button type="button" class="btn btn-warning" onclick="window.location.href = '../../{{ MEDIA_URL }}documents/{{ list.form_inf }}'">Открыть</button></td>
+        </tr>
+        <tr>
+            <td> <input type="text" value="Брошюра исследователя" id="list.cast_researcher"> </td>
+            <td> <input type="text" value="{{ list.cast_researcher_version }}"</td>
+            <td> <input type="text" value="{{ list.cast_researcher_date }}"</td>
+            <td class="text-center"><button type="button" class="btn btn-warning" onclick="window.location.href = '../../{{ MEDIA_URL }}documents/{{ list.cast_researcher }}'">Открыть</button></td>
+        </tr>
+        <tr>
+            <td> <input type="text" value="Договор ОС" id="list.contract"> </td>
+            <td> <input type="text" value="-"</td>
+            <td> <input type="text" value="{{ list.contract_date }}"</td>
+            <td class="text-center"><button type="button" class="btn btn-warning" onclick="window.location.href = '../../{{ MEDIA_URL }}documents/{{ list.contract }}'">Открыть</button></td>
+        </tr>
+        <tr>
+            <td> <input type="text" value="Рекламная продукция" id="list.advertising"> </td>
+            <td> <input type="text" value="-"</td>
+            <td> <input type="text" value="-"</td>
+            <td class="text-center"><button type="button" class="btn btn-warning" onclick="window.location.href = '../../{{ MEDIA_URL }}documents/{{ list.advertising }}'">Открыть</button></td>
+        </tr>
+        <tr>
+            <td> <input type="text" value="Рекламная продукция" id="list.write_objects"> </td>
+            <td> <input type="text" value="-"</td>
+            <td> <input type="text" value="-"</td>
+            <td class="text-center"><button type="button" class="btn btn-warning" onclick="window.location.href = '../../{{ MEDIA_URL }}documents/{{ list.write_objects }}'">Открыть</button></td>
+        </tr>
+        <tr>
+            <td> <input type="text" value="{{ list.name_another_doc }}" id="list.write_objects"> </td>
+             <td> <input type="text" value="{{ list.another_doc_version }}"</td>
+             <td> <input type="text" value="{{ list.another_doc_version }}"</td>
+            <td class="text-center"><button type="button" class="btn btn-warning" onclick="window.location.href = '../../{{ MEDIA_URL }}documents/{{ list.another_doc }}'">Открыть</button></td>
+        </tr>
     </form>
-    {% endfor %}
 </table>
+{% endfor %}
 
 
 <form method="POST">

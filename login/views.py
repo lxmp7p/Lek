@@ -57,7 +57,7 @@ def two_factor(request):
         rand_code = random_code()
         person.auth_code = rand_code
         person.save()
-        send_mail('Авторизация на портале', 'Ваш код подтверждения: ' + rand_code, 'nii.oncolog.lek@gmail.com',
+        send_mail('Auth', 'Code: ' + rand_code, 'timurgorashenko@yandex.ru',
                   [email], fail_silently=False)
         return render(request, 'login/two_factor.html')
 

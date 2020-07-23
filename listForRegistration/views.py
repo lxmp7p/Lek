@@ -41,7 +41,6 @@ def listForRegistrationPage(request):
             {"role": "kommision", "id": 11},
         ]
         form = RegisterForm(request.POST)
-        print(r'cccc!!!!!!', request.body)
         action_re = re.findall(r'ACCEPT|DELETE', str(request.body)) #Получение имени нажатой кнопки через регулярку
         for i in roleList:
             if re.findall(i.get('role'),str(request.body)):
@@ -102,7 +101,7 @@ def listForRegistrationPage(request):
                                                     )
                     print(password)
                     user.save()
-                    send_mail('Регистрация на портале','Ваш пароль для входа: ' + password, 'nii.oncolog.lek@gmail.com',
+                    send_mail('Регистрация на портале','Ваш пароль для входа: ' + password, 'timurgorashenko@yandex.ru',
                               ['lxmp7p@yandex.ru'], fail_silently=False)
                     models.listRegisterRequest.objects.filter(id=i[0]).delete() #Удаляем заявку
 

@@ -21,11 +21,19 @@ def get_info_reguest(request, idRequest):
             pass
         if (move == 'DELETE'):
             models.DocRequestListMki.objects.filter(id=idRequest).delete()
-        print(request.body, move)
         return redirect('../../listRequests/')
     else:
         form = forms.DocRequestListMkiForm()
         infoRequest = models.DocRequestListMki.objects.filter(id=idRequest)
+        files = ( 'list_members',
+                  'accept_research',
+                  'protocol_research',
+                  'form_inf',
+                  'cast_researcher',
+                  'contract',
+                  'advertising',
+                  'write_objects',
+                  'another_doc',)
         content = {
                 'form': form,
                 'username': request.user.username,
@@ -33,5 +41,6 @@ def get_info_reguest(request, idRequest):
                 'fio': request.user.fio,
                 'infoRequest': infoRequest,
                 'idRequest': infoRequest,
+                'files': files,
                 }
         return render(request, 'infoRequest/infoRequest.html', content)

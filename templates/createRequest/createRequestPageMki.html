@@ -15,7 +15,15 @@
                             <div class='invalid-feedback'>Введите название исследования</div>
                             {{ form.description.errors }}
                         </div>
+                        <label >Выберите главного исследователя</label>
+                        <select name="_menu" id="_menu" size="1" style="margin-bottom:50px;">
+                            {% for list in main_resercher_list %}
+                    <option value="{{ list.fio  }}" selected="selected" name="_usr_main_res" id="_usr_main_res"> {{ list.fio }}</option>
+                            {% endfor %}
+            </select>
+                        <br>
                         <div class="container-login100-form-btn">
+                            <br>
                             <button class="login100-form-btn" type="button" onclick="location.href = `#marker-1`">
                                 Далее
                             </button>
