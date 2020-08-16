@@ -13,20 +13,33 @@ from .forms import DocRequestListMkiForm
 from django.forms.formsets import formset_factory
 from datetime import datetime
 from listForRegistration import models as UserList
+from .models import listRequestResearch
 # Create your views here.
 
+
+def addAllRequestToList(description,owner,date_created):
+    listRequestResearch.objects.create(description=description,
+                                       owner=owner,
+                                       date_created=date_created,
+                                       status='Ожидание решения комиссии')
 def create_request_mki(request):
     ArticleFormSet = formset_factory(DocRequestListMkiForm)
     formset = ArticleFormSet()
     print(formset)
     if request.method == 'POST':
         form = DocRequestListMkiForm(request.POST, request.FILES)
-        print("Второй запрос", form)
         main_res_usr = request.POST.get('_menu', '')
         print(form.media)
         if form.is_valid():
-            form.cleaned_data['owner'] = 'test'
+            # Убрал это ! form.cleaned_data['owner'] = 'test'
             personal = form.save(commit=False)
+            description = 'Сделать получение названия исследования'
+            addAllRequestToList(description,
+                                request.user.username,
+                                datetime.now(),
+                                )
+
+
             personal.owner = request.user.username
             personal.date_created = datetime.now()
             personal.owner_fio = request.user.fio

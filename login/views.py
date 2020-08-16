@@ -49,7 +49,7 @@ def two_factor(request):
                     'username': request.user.username,
                     'fio': request.user.fio,
                 }
-                return redirect('../profile/')
+                return redirect('к')
         else:
             return render(request, 'login/two_factor.html')
     else:

@@ -1,6 +1,14 @@
 from django.db import models
 
 # Create your models here.
+
+
+class listRequestResearch(models.Model):
+    description= models.CharField(max_length=50)
+    owner = models.CharField(max_length=20)
+    status = models.CharField(max_length=12)
+    date_created = models.CharField(max_length=30)
+
 class DocRequestListMki(models.Model):
     description = models.CharField(max_length=255)
     document = models.FileField(upload_to='documents/',  blank=True, null=True)

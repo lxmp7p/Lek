@@ -6,7 +6,7 @@
       <a class="btn btn-outline-success mr-2    " href="{% url 'listRequests' %}">Просмотр заявок на исследование</a>
   </form>
      <form class="form-inline my-2 my-lg-0">
-         <a class="btn btn-outline-success my-2 my-sm-0" type="button" href="{% url 'personalProfile' %}">{{ fio }}</a>
+         <a class="btn btn-outline-success my-2 my-sm-0" type="button" href="{% url 'main_cab' %}">{{ fio }}</a>
       <button class="btn btn-outline-success my-2 my-sm-0" type="button" onclick="location.href = `{% url 'logout' %}`">Выход</button>
     </form>
 </nav>

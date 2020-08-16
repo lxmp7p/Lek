@@ -140,3 +140,5 @@ EMAIL_HOST_USER = 'timurgorashenko@yandex.ru'
 EMAIL_HOST_PASSWORD = 's98239718'
 EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True
+
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '188.243.76.119',]

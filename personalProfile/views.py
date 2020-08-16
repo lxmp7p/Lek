@@ -8,7 +8,17 @@ import hashlib
 from django.contrib.auth import authenticate
 from .forms import userInfo
 from listForRegistration import models as registrationModels
+from createRequest import models as listRequestModels
 
+def get_main_cab(request):
+    docRequestListConst = listRequestModels.listRequestResearch.objects.filter(owner=request.user.username)
+    content = {
+        'username': request.user.username,
+        'role_id': request.user.role_id,
+        'fio': request.user.fio,
+        'listRequest': docRequestListConst,
+    }
+    return render(request, 'profile/main_cab.html', content)
 
 def get_profile(request):
     person = registrationModels.registeredUsers.objects.get(username=request.user.username)
