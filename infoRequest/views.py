@@ -26,7 +26,6 @@ def get_info_reguest(request, idRequest):
             requestId.save()
             return redirect('../../listRequests/')
         if (move == 'DELETE'):
-            print(str(request.body))
             descriptionDelete = request.POST.get("descrtiptionDelete")
             usernameDelete = models.DocRequestListMki.objects.get(id=idRequest)
             usernameDeleteMail = userListModel.registeredUsers.objects.get(username=usernameDelete.owner)

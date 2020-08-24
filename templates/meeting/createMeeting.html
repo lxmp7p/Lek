@@ -1,56 +1,73 @@
 {% extends 'base.html' %}
 {% block content %}
- <div class="row">
+<div class="row" xmlns="http://www.w3.org/1999/html">
 <div class="col-sm">
     <table class="table col-sm " border="solid"">
         <thead class="thead-dark col-sm">
         <tr>
             <th scope="col-sm">ФИО</th>
+            <th scope="col-sm">Логин</th>
              <th scope="col-sm"></th>
         </tr>
         </thead>
         {% for list in userList %}
-        <form method="POST">
-            {% csrf_token %}
-            <tr>
-                <td>{{ list.fio }}</td>
-                <td><button class="btn btn-success" type="submit" name="ADD">Добавить</button></td></td>
+            <tr class="userList">
+                <td>{{ list.fio }}</label></td>
+                    <td><label name="{{ list.username }}">{{ list.username }}</label></td>
+
+                 <td><button class="btn btn-success" type="button" id="ADD{{list.username}}" onclick="addUsers('{{ list.username }}')">Добавить</button></td></td>
             </tr>
-        </form>
         {% endfor %}
     </table>
 </div>
 
 <div class="col-sm">
     <form method="POST">
-    <table class="table col-sm " border="solid"">
+    <table class="table col-sm" border="solid"">
+        <thead class="thead-dark col-sm">
+        <tr>
+            <th scope="col-sm">Участники</th>
+        </tr>
+
+        </thead>
+        {% csrf_token %}
+        <tr>
+        </tr>
+
+        </table>
+        <input name="d"><select size="15" multiple  name="userLists" id = "userLists" class = "userLists" style="width:100%;"></input>
+
+</select>
+            <table class="table col-sm " border="solid"">
         <thead class="thead-dark col-sm">
         <tr>
             <th scope="col-sm">Исследования</th>
         </tr>
         </thead>
-        {% for list in userList %}
-        {% csrf_token %}
-        <tr>
-            <td>{{ list.TEST }}</td>
-        </tr>
-        {% endfor %}
-        </table>
 
-            <table class="table col-sm " border="solid"">
-        <thead class="thead-dark col-sm">
-        <tr>
-            <th scope="col-sm">Участники</th>
-        </tr>
-        </thead>
-        {% for list in userList %}
-        {% csrf_token %}
-        <tr>
-            <td>{{ list.TEST }}</td>
-        </tr>
-        {% endfor %}
         </table>
-        <td><button class="btn btn-success" type="submit" name="ADD" style="width:100%">Назначить исследование</button></td></td>
+          <select size="15" value="test" multiple  name="reserchs"  onloadedmetadata="" id = "reserchs" class = "reserchs" style="width:100%;">
+
+          </select>
+        <br><br>
+					<div class="wrap-input100 validate-input m-b-35" data-validate = "Enter num">
+						<label for="{{ form.date.id_for_label }}"></label>
+						<br>
+						{{ form.date }}
+						<span class="focus-input100" data-placeholder="Дата заседания" min="2000-01-01"></span>
+						<div class='invalid-feedback'>Введите дату заседания</div>
+							{{ form.date.errors }}
+					</div>
+
+                            <div class="wrap-input100 validate-input m-b-35" data-validate = "Enter dolzhnost">
+						<label for="{{ form.time.id_for_label }}"></label>
+						<br>
+						{{ form.time }}
+						<span class="focus-input100" data-placeholder="Время заседания"></span>
+						<div class='invalid-feedback'>Введите время заседания</div>
+							{{ form.time.errors }}
+					</div>
+         <td><button class="btn btn-success" type="submit" name="ADD" style="width:100%">Назначить заседание</button></td></td>
         </form>
 </div>
 
@@ -58,35 +75,60 @@
     <table class="table col-sm " border="solid"">
         <thead class="thead-dark col-sm">
         <tr>
+            <th scope="col-sm">id</th>
             <th scope="col-sm">Исследование</th>
              <th scope="col-sm"></th>
         </tr>
         </thead>
         {% for list in requestListMki %}
-        <form method="POST">
             {% csrf_token %}
             <tr>
-                <td>{{ list.description }}</td>
-                <td><button class="btn btn-success" type="submit" name="ADD" onclick="change()">Добавить</button></td></td>
+                <td><label name="{{ list.id }}">{{ list.id  }}</label></td>
+                <td><label name="{{ list.description }}">{{ list.description }}</label></td>
+                <td><button class="btn btn-success" type="button" id="ADD{{list.id}}" onclick="addReserches  ('{{ list.description }}','{{ list.id }}')">Добавить</button></td></td>
             </tr>
-<script>
-function change()
-{
-var el = document.getElementById('id');
 
-        if (typeof elem.textContent !== "undefined") {
-    el.textContent = 'text';
-} else {
-    el.innerText = 'text';
-}
-
-el.innetHTML = '<p>text</p>'
-}
-</script>
-            <label id="id">c</label>
         </form>
         {% endfor %}
     </table>
 </div>
  </div>
+
+
+<script>
+function addReserches(metkas,idValue){
+ select = document.getElementById('reserchs');
+M = document.getElementsByName (metkas);
+function dobavlenie() {
+			for (var i = 0;i<M.length; i++) {
+			    if (i % 4 == 0) {
+			    var k = select.options.length
+			    select.options[k] = new Option(M[i].lastChild.data, i);
+			    select.options[k].value = idValue
+			    }
+ 				}
+		}
+dobavlenie()
+document.getElementById("ADD" + idValue).disabled = true;
+}
+</script>
+
+<script>
+function addUsers(metkas){
+ select = document.getElementById('userLists');
+M = document.getElementsByName (metkas);
+function dobavlenie() {
+			for (var i = 0;i<M.length; i++) {
+			    if (i % 4 == 0) {
+			    var k = select.options.length
+			    select.options[k] = new Option(M[i].lastChild.data, i);
+			    select.options[k].value = metkas
+			    }
+ 				}
+		}
+dobavlenie()
+document.getElementById("ADD" + metkas).disabled = true;
+}
+</script>
+
 {% endblock %}
