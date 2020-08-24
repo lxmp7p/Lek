@@ -21,7 +21,10 @@ def get_info_reguest(request, idRequest):
             for i in i_delete:
                 move = i
         if (move == 'ACCEPT'):
-            pass
+            requestId = models.DocRequestListMki.objects.get(id=idRequest)
+            requestId.status = 'True'
+            requestId.save()
+            return redirect('../../listRequests/')
         if (move == 'DELETE'):
             print(str(request.body))
             descriptionDelete = request.POST.get("descrtiptionDelete")

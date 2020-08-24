@@ -39,7 +39,7 @@ def first_create_request_mki(request):
                                 datetime.now(),
                                 )
 
-
+            personal.status = 'False'
             personal.owner = request.user.username
             personal.date_created = datetime.now()
             personal.owner_fio = request.user.fio

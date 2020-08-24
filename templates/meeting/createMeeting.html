@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+{% block content %}
+ <div class="row">
+<div class="col-sm">
+    <table class="table col-sm " border="solid"">
+        <thead class="thead-dark col-sm">
+        <tr>
+            <th scope="col-sm">ФИО</th>
+             <th scope="col-sm"></th>
+        </tr>
+        </thead>
+        {% for list in userList %}
+        <form method="POST">
+            {% csrf_token %}
+            <tr>
+                <td>{{ list.fio }}</td>
+                <td><button class="btn btn-success" type="submit" name="ADD">Добавить</button></td></td>
+            </tr>
+        </form>
+        {% endfor %}
+    </table>
+</div>
+
+<div class="col-sm">
+    <form method="POST">
+    <table class="table col-sm " border="solid"">
+        <thead class="thead-dark col-sm">
+        <tr>
+            <th scope="col-sm">Исследования</th>
+        </tr>
+        </thead>
+        {% for list in userList %}
+        {% csrf_token %}
+        <tr>
+            <td>{{ list.TEST }}</td>
+        </tr>
+        {% endfor %}
+        </table>
+
+            <table class="table col-sm " border="solid"">
+        <thead class="thead-dark col-sm">
+        <tr>
+            <th scope="col-sm">Участники</th>
+        </tr>
+        </thead>
+        {% for list in userList %}
+        {% csrf_token %}
+        <tr>
+            <td>{{ list.TEST }}</td>
+        </tr>
+        {% endfor %}
+        </table>
+        <td><button class="btn btn-success" type="submit" name="ADD" style="width:100%">Назначить исследование</button></td></td>
+        </form>
+</div>
+
+     <div class="col-sm">
+    <table class="table col-sm " border="solid"">
+        <thead class="thead-dark col-sm">
+        <tr>
+            <th scope="col-sm">Исследование</th>
+             <th scope="col-sm"></th>
+        </tr>
+        </thead>
+        {% for list in requestListMki %}
+        <form method="POST">
+            {% csrf_token %}
+            <tr>
+                <td>{{ list.description }}</td>
+                <td><button class="btn btn-success" type="submit" name="ADD" onclick="change()">Добавить</button></td></td>
+            </tr>
+<script>
+function change()
+{
+var el = document.getElementById('id');
+
+        if (typeof elem.textContent !== "undefined") {
+    el.textContent = 'text';
+} else {
+    el.innerText = 'text';
+}
+
+el.innetHTML = '<p>text</p>'
+}
+</script>
+            <label id="id">c</label>
+        </form>
+        {% endfor %}
+    </table>
+</div>
+ </div>
+{% endblock %}

@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'listRequests.apps.ListrequestsConfig',
     'personalProfile.apps.PersonalprofileConfig',
     'infoRequest.apps.InforequestConfig',
+    'meeting.apps.MeetingConfig',
 ]
 
 MIDDLEWARE = [
