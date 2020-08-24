@@ -23,6 +23,7 @@ def get_info_reguest(request, idRequest):
         if (move == 'ACCEPT'):
             requestId = models.DocRequestListMki.objects.get(id=idRequest)
             requestId.status = 'True'
+            requestId.secretar_accept = 'True'
             requestId.save()
             return redirect('../../listRequests/')
         if (move == 'DELETE'):

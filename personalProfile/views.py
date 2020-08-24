@@ -20,6 +20,14 @@ def get_main_cab(request):
     }
     return render(request, 'profile/main_cab.html', content)
 
+def watch_requests(request):
+    listRequests = listRequestModels.DocRequestListMki.objects.filter(secretar_accept=True)
+    return render(request, 'profile/viewRequestPredsetatel.html',
+                  {'username': request.user.username, 'fio': request.user.fio, 'role_id': request.user.role_id,
+                   'listRequest': listRequests, })
+
+
+
 def get_history_requests(request):
     docRequestListConst = listRequestModels.listRequestResearch.objects.filter()
     content = {

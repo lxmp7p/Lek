@@ -15,6 +15,7 @@ class DocRequestListMki(models.Model):
     owner = models.CharField(max_length=20,  blank=True, null=True)
     owner_fio = models.CharField(max_length=20,  blank=True, null=True)
     status = models.CharField(max_length=10, blank=True, null=True)
+    secretar_accept = models.CharField(max_length=6, blank=True, null=True)
     date_created = models.CharField(max_length=15)
     main_researcher = models.CharField(max_length=50, blank=True, null=True)
 

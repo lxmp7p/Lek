@@ -40,4 +40,5 @@ urlpatterns = [
     path('profile/', include('personalProfile.urls'), name='profile'),
     path('meeting/', include('meeting.urls'), name='meeting'),
     path('infoRequest/<int:idRequest>/', include("infoRequest.urls")),
+    path('profile/watch_requests/<int:idRequest>/', include("infoRequest.urls")),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

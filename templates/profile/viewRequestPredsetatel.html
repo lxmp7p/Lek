@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+<table class="table" border="solid">
+    <thead class="thead-dark">
+    <tr>
+        <th scope="col">Название</th>
+        <th scope="col">Владелец</th>
+        <th scope="col">Дата отправления</th>
+        <th class="text-center" scope="col">Просмотр</th>
+    </tr>
+    </thead>
+    {% for list in listRequest reversed %}
+    <form method="POST">
+        {% csrf_token %}
+        <tr>
+            <td> <input type="text" value="{{ list.description }}" id="list.description" name="list.description"> </td>
+            <td> <input type="text" value="{{ list.owner_fio }}" id="list.fio" name="list.fio"> </td>
+            <td> <input type="text" value="{{ list.date_created }}" id="list.mail" name="list.mail"> </td>
+            <td class="text-center"><button type="button" class="btn btn-warning" onclick="window.location.href = '../watch_requests/{{ list.id }}'">Открыть</button></td>
+        </tr>
+    </form>
+    {% endfor %}
+
+</table>
+{% endblock %}
