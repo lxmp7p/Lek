@@ -5,6 +5,9 @@ from createRequest import models
 from createRequest import forms
 import re
 from django.shortcuts import redirect
+from listForRegistration import models as userListModel
+from django.core.mail import send_mail
+from createRequest import models as listRequestResearchModels
 
 def get_info_reguest(request, idRequest):
     if request.method == 'POST':
@@ -20,6 +23,13 @@ def get_info_reguest(request, idRequest):
         if (move == 'ACCEPT'):
             pass
         if (move == 'DELETE'):
+            print(str(request.body))
+            descriptionDelete = request.POST.get("descrtiptionDelete")
+            usernameDelete = models.DocRequestListMki.objects.get(id=idRequest)
+            usernameDeleteMail = userListModel.registeredUsers.objects.get(username=usernameDelete.owner)
+            mail = usernameDeleteMail.email
+            send_mail('Отказ в проведение исследования', 'Причина отказа: ' + descriptionDelete, 'timurgorashenko@yandex.ru',
+                      [mail], fail_silently=False)
             models.DocRequestListMki.objects.filter(id=idRequest).delete()
         return redirect('../../listRequests/')
     else:

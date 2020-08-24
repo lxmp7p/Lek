@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from datetime import datetime
 
 # Create your views here.
 from django.template.context_processors import csrf
@@ -14,4 +15,4 @@ def registration_page(request):
             return redirect("/")
     else:
         form = RegisterForm()
-    return render(request, 'registration/registration_page.html', {'form': form})
+    return render(request, 'registration/registration_page.html', {'form': form, 'datetime': datetime.now()})

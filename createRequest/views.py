@@ -22,7 +22,7 @@ def addAllRequestToList(description,owner,date_created):
                                        owner=owner,
                                        date_created=date_created,
                                        status='Ожидание решения комиссии')
-def create_request_mki(request):
+def first_create_request_mki(request):
     ArticleFormSet = formset_factory(DocRequestListMkiForm)
     formset = ArticleFormSet()
     print(formset)
@@ -51,12 +51,19 @@ def create_request_mki(request):
     form = DocRequestListMkiForm()
     main_resercher_list = UserList.registeredUsers.objects.filter(role_id=6)
     print(main_resercher_list)
-    return render(request, 'createRequest/createRequestPageMki.html', {
+    return render(request, 'createRequest/Mki/createRequestPageMki.html', {
         'form': form,
         'username': request.user.username,
         'role_id': request.user.role_id,
         'fio': request.user.fio,
         'main_resercher_list': main_resercher_list,
+    })
+
+def get_list_mki(request):
+    return render(request, 'createRequest/Mki/listMki.html', {
+        'username': request.user.username,
+        'role_id': request.user.role_id,
+        'fio': request.user.fio,
     })
 
 def create_request(request):

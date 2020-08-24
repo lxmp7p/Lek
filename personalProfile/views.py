@@ -20,6 +20,16 @@ def get_main_cab(request):
     }
     return render(request, 'profile/main_cab.html', content)
 
+def get_history_requests(request):
+    docRequestListConst = listRequestModels.listRequestResearch.objects.filter()
+    content = {
+        'username': request.user.username,
+        'role_id': request.user.role_id,
+        'fio': request.user.fio,
+        'listRequest': docRequestListConst,
+    }
+    return render(request, 'profile/all_requests.html', content)
+
 def get_profile(request):
     person = registrationModels.registeredUsers.objects.get(username=request.user.username)
     print(person)

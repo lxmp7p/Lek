@@ -91,6 +91,21 @@
             Принять
         </button>
         <br>
+        <br>
+
+
+        <form method="post">
+                    {% csrf_token %}
+					<span class="login100-form-title p-b-70" method="POST">
+						Отклонить заявку
+					</span>
+<div class="input-group">
+  <div class="input-group-prepend">
+    <span class="input-group-text" name="descrtiptionDelete">Введите причину отказа</span>
+  </div>
+  <textarea class="form-control" aria-label="Введите причину отказа" name="descrtiptionDelete"></textarea>
+</div>
+</div>
         <button class="login100-form btn btn-danger" type="submit" name="DELETE">
             Отклонить
         </button>

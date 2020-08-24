@@ -3,8 +3,9 @@
     <nav class="navbar navbar-light bg-dark p-2">
         <div class="limiter">
             <div class="text-center">
-                <button class='btn btn-info' type="button" onclick="location.href = `{% url 'main_cab' %}`">Личный кабинет</button>
+               <button class='btn btn-info' type="button" onclick="location.href = `{% url 'main_cab' %}`">Личный кабинет</button>
                 <button class='btn btn-info' type="button" onclick="location.href = `{% url 'personalProfile' %}`">Персональная информация</button>
+                <button class='btn btn-info' type="button" onclick="location.href = `{% url 'historyRequests' %}`">История заявок</button>
             </div>
     </nav>
 		<div class="container-login100">
@@ -19,7 +20,7 @@
 						<label for="{{ form.dateb.id_for_label }}"></label>
 						<br>
 						{{ form.dateb }}
-						<span class="focus-input100" data-placeholder="Дата рождения"></span>
+						<span class="focus-input100" data-placeholder="Дата рождения" min="2000-01-01"></span>
 						<div class='invalid-feedback'>Введите дату рождения</div>
 							{{ form.dateb.errors }}
 					</div>
