@@ -3,7 +3,7 @@
 <table class="table" border="solid">
     <thead class="thead-dark">
     <tr>
-        <th scope="col">Логин</th>
+        <th scope="col">Логин и дата подачи</th>
         <th scope="col">Почта</th>
         <th scope="col">ФИО</th>
         <th scope="col">Роль</th>
@@ -15,7 +15,7 @@
     <form method="POST">
         {% csrf_token %}
         <tr>
-            <td> <input type="text" value="{{ list.username }}" id="list.username" name="list.username"> </td>
+            <td> <input type="text" value="{{ list.username }}" id="list.username" name="list.username"> <input type="text"  value="{{ list.date_created }}" id="list.date_created" name="list.date_created"> </td>
             <td> <input type="text" value="{{ list.mail }}" id="list.mail" name="list.mail"> </td>
             <td> <input type="text" value="{{ list.fio }}" id="list.fio" name=list.fio"> </td>
 
@@ -43,5 +43,6 @@
     {% endfor %}
 
 </table>
+
 
 {% endblock %}

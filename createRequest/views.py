@@ -16,6 +16,7 @@ from listForRegistration import models as UserList
 from .models import listRequestResearch
 # Create your views here.
 
+now = datetime.now()
 
 def addAllRequestToList(description,owner,date_created):
     listRequestResearch.objects.create(description=description,
@@ -36,13 +37,13 @@ def first_create_request_mki(request):
             description = 'Сделать получение названия исследования'
             addAllRequestToList(description,
                                 request.user.username,
-                                datetime.now(),
+                                now.strftime("%d-%m-%Y %H:%M"),
                                 )
 
             personal.status = 'False'
             personal.secretar_accept = 'False'
             personal.owner = request.user.username
-            personal.date_created = datetime.now()
+            personal.date_created = now.strftime("%d-%m-%Y %H:%M")
             personal.owner_fio = request.user.fio
             personal.main_researcher = main_res_usr
             personal.save()
