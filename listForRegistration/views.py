@@ -18,6 +18,10 @@ import hashlib
 from django.contrib.auth import authenticate
 from datetime import date
 from django.core.mail import send_mail
+import logging
+# Create your views here.
+
+logger = logging.getLogger(__name__)
 
 def random_password():
     length = 8
@@ -74,7 +78,6 @@ def listForRegistrationPage(request):
         req = ''
         # В object хранится значение id нажатой кнопки типа int
         # В action хранится значение нажатой кнопки типа str (ACCEPT/DELETE)
-        print(r"Роль", role)
         for r in roleList:
             if role == r.get('role'):
                 role_id = r.get('id')
@@ -99,15 +102,16 @@ def listForRegistrationPage(request):
                                                     is_active='False',
                                                     date_joined=date.today(),
                                                     )
-                    print(password)
                     user.save()
                     send_mail('Регистрация на портале','Ваш пароль для входа: ' + password, 'timurgorashenko@yandex.ru',
                               ['lxmp7p@yandex.ru'], fail_silently=False)
+                    logger.info(str(request.user.username) + " ACCEPT user request from registration with username =" + str(req[1]))
                     models.listRegisterRequest.objects.filter(id=i[0]).delete() #Удаляем заявку
 
         elif action=="DELETE":
             for i in models.listRegisterRequest.objects.values_list(): # Пробегаем по таблице с заявками
                 if i[0] == object_delete:
+                    logger.info(str(request.user.username) + " DELETE user request from registration")
                     models.listRegisterRequest.objects.filter(id=i[0]).delete() #Удаляем заявку
     else:
         form = RegisterForm()

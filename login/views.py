@@ -10,8 +10,11 @@ import listForRegistration
 from django.contrib.auth import authenticate
 import string
 import random
+import logging
 from django.core.mail import send_mail
 from listForRegistration import models as registrationModels
+
+logger = logging.getLogger(__name__)
 
 def random_code():
     chars = string.ascii_uppercase + string.ascii_lowercase + string.digits
@@ -25,6 +28,7 @@ def login_page(request):
         user = auth.authenticate(username=username, password=password)
         if user is not None:
             auth.login(request, user)
+            logger.info(str(username) + " auth in system!")
             return redirect('two_factor')
         else:
             return render(request, 'login/login_page.html')

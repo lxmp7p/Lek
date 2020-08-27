@@ -14,8 +14,10 @@ from django.forms.formsets import formset_factory
 from datetime import datetime
 from listForRegistration import models as UserList
 from .models import listRequestResearch
+import logging
 # Create your views here.
 
+logger = logging.getLogger(__name__)
 
 def addAllRequestToList(description,owner,date_created):
     listRequestResearch.objects.create(description=description,
@@ -23,6 +25,7 @@ def addAllRequestToList(description,owner,date_created):
                                        date_created=date_created,
                                        status='Ожидание решения комиссии')
 def first_create_request_mki(request):
+    logger.info(str(request.user.username) + " open createRequestMki page!")
     ArticleFormSet = formset_factory(DocRequestListMkiForm)
     formset = ArticleFormSet()
     print(formset)
@@ -46,6 +49,7 @@ def first_create_request_mki(request):
             personal.owner_fio = request.user.fio
             personal.main_researcher = main_res_usr
             personal.save()
+            logger.info(str(request.user.username) + " create new request to reserch!")
             return redirect('../../createRequest/')
         else:
             print("ошибки формы \n", form.errors)
@@ -68,6 +72,7 @@ def get_list_mki(request):
     })
 
 def create_request(request):
+    logger.info(str(request.user.username) + " open createRequest page!")
     return render(request, 'createRequest/selectRequestType.html', {
         'username': request.user.username,
         'role_id': request.user.role_id,
