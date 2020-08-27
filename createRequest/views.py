@@ -17,7 +17,11 @@ from .models import listRequestResearch
 import logging
 # Create your views here.
 
+<<<<<<< HEAD
 logger = logging.getLogger(__name__)
+=======
+now = datetime.now()
+>>>>>>> 84739b6eac0a768d9893f7201f23577b6a6aa319
 
 def addAllRequestToList(description,owner,date_created):
     listRequestResearch.objects.create(description=description,
@@ -39,13 +43,13 @@ def first_create_request_mki(request):
             description = 'Сделать получение названия исследования'
             addAllRequestToList(description,
                                 request.user.username,
-                                datetime.now(),
+                                now.strftime("%d-%m-%Y %H:%M"),
                                 )
 
             personal.status = 'False'
             personal.secretar_accept = 'False'
             personal.owner = request.user.username
-            personal.date_created = datetime.now()
+            personal.date_created = now.strftime("%d-%m-%Y %H:%M")
             personal.owner_fio = request.user.fio
             personal.main_researcher = main_res_usr
             personal.save()
