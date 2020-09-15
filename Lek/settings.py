@@ -138,8 +138,8 @@ MEDIA_URL = '/documents/'
 
 EMAIL_HOST = 'smtp.yandex.ru'
 EMAIL_PORT = 465
-EMAIL_HOST_USER = 'timurgorashenko@yandex.ru'
-EMAIL_HOST_PASSWORD = 's98239718'
+EMAIL_HOST_USER = LOGIN
+EMAIL_HOST_PASSWORD = PASS
 EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True
 
