@@ -1,7 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from listForRegistration import models
 from createRequest import models as requestListMkiModels
 from .forms import meetingCreate
+from .models import listMeetings
+
 import re
 
 # Create your views here.
@@ -29,8 +31,18 @@ def create_meeting(request):
         for i in researchForAccept:
             researchAcceptList.append(i[9:])
 
+        form = meetingCreate(request.POST)
+        if form.is_valid():
+            date = request.POST.get("date")
+            time = request.POST.get("date")
+            meeting = listMeetings()
+            meeting.time = time
+            meeting.date = date
+            meeting.accepted_meetings = researchAcceptList
+            meeting.users_invited = userToInvitedList
+            meeting.save()
+            return redirect('main')
 
-        print(researchAcceptList)
-        print(userToInvitedList)
+
         return render(request, 'meeting/createMeeting.html', context=content)
     return render(request, 'meeting/createMeeting.html', context=content)

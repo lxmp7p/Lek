@@ -17,11 +17,9 @@ from .models import listRequestResearch
 import logging
 # Create your views here.
 
-<<<<<<< HEAD
 logger = logging.getLogger(__name__)
-=======
 now = datetime.now()
->>>>>>> 84739b6eac0a768d9893f7201f23577b6a6aa319
+
 
 def addAllRequestToList(description,owner,date_created):
     listRequestResearch.objects.create(description=description,
