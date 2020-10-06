@@ -3,10 +3,24 @@ from listForRegistration import models
 from createRequest import models as requestListMkiModels
 from .forms import meetingCreate
 from .models import listMeetings
-
+from listForRegistration import models as listForRegistration
+from django.core.mail import send_mail
 import re
 
 # Create your views here.
+
+def send_message_users(userList,researchs):
+    researchs_description = []
+    for i in researchs:
+        description = requestListMkiModels.DocRequestListMki.objects.get(id=i)
+        researchs_description.append(description.description)
+
+    for username in userList:
+        user = listForRegistration.registeredUsers.objects.get(username=username)
+        send_mail('Добавление в исследование', 'Вы были добавлены в список участников для обсуждения таких тем как: ' + str(researchs_description), 'timurgorashenko@yandex.ru',
+                  [user.email], fail_silently=False)
+
+
 def create_meeting(request):
     userList = models.registeredUsers.objects.all()
     requestListMki = requestListMkiModels.DocRequestListMki.objects.filter(status='True')
@@ -31,6 +45,7 @@ def create_meeting(request):
         for i in researchForAccept:
             researchAcceptList.append(i[9:])
 
+
         form = meetingCreate(request.POST)
         if form.is_valid():
             date = request.POST.get("date")
@@ -41,6 +56,7 @@ def create_meeting(request):
             meeting.accepted_meetings = researchAcceptList
             meeting.users_invited = userToInvitedList
             meeting.save()
+            send_message_users(userToInvitedList,researchAcceptList)
             return redirect('main')
 
 
