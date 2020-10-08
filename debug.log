@@ -1444,3 +1444,15 @@ NameError: name 'description' is not defined
 2020-10-08 16:36:22,431 django.request WARNING  Not Found: /favicon.ico
 2020-10-08 16:41:11,773 asyncio      DEBUG    Using proactor: IocpProactor
 2020-10-08 16:41:11,873 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 17:32:56,869 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 17:33:20,524 login.views  INFO     admin auth in system!
+2020-10-08 17:33:23,093 django.request WARNING  Not Found: /favicon.ico
+2020-10-08 17:33:56,033 django.request WARNING  Not Found: /profile/documents/accept_research/реклама_QgTLeZk.txt
+2020-10-08 17:34:09,291 django.request WARNING  Not Found: /profile/documents/list_members/протокол_исследования_O4MYwvt.txt
+2020-10-08 17:34:33,795 django.request WARNING  Not Found: /profile/documents/accept_research/реклама_QgTLeZk.txt
+2020-10-08 17:34:37,304 django.request WARNING  Not Found: /profile/documents/protocol_research/письмо_2OFI7iq.txt
+2020-10-08 17:35:41,505 django.request WARNING  Not Found: /watch_requests/9
+2020-10-08 17:37:49,018 django.request WARNING  Not Found: /profile/infoRequest/9
+2020-10-08 17:37:54,734 django.request WARNING  Not Found: /profile/infoRequest/9
+2020-10-08 17:40:45,517 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 17:40:45,602 asyncio      DEBUG    Using proactor: IocpProactor
