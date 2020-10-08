@@ -825,3 +825,622 @@ TypeError: can only concatenate str (not "list") to str
 2020-10-06 22:41:16,469 django.utils.autoreload INFO     Watching for file changes with StatReloader
 2020-10-06 22:42:00,049 asyncio      DEBUG    Using proactor: IocpProactor
 2020-10-06 22:42:00,135 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 13:00:30,786 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 15:41:19,279 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 15:41:21,118 django.request WARNING  Not Found: /favicon.ico
+2020-10-08 15:41:24,443 login.views  INFO     admin auth in system!
+2020-10-08 15:44:28,473 django.utils.autoreload INFO     C:\Lek\personalProfile\views.py changed, reloading.
+2020-10-08 15:44:28,473 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 15:44:29,692 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 15:45:17,848 django.utils.autoreload INFO     C:\Lek\personalProfile\views.py changed, reloading.
+2020-10-08 15:45:17,848 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 15:45:18,947 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 15:45:33,354 django.utils.autoreload INFO     C:\Lek\personalProfile\views.py changed, reloading.
+2020-10-08 15:45:33,354 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 15:45:34,542 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 15:45:35,043 django.request ERROR    Internal Server Error: /profile/main_cab/
+Traceback (most recent call last):
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Lek\personalProfile\views.py", line 16, in get_main_cab
+    userlistMeetings = models.listMeetings.objects.get()
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\db\models\query.py", line 419, in get
+    raise self.model.MultipleObjectsReturned(
+meeting.models.listMeetings.MultipleObjectsReturned: get() returned more than one listMeetings -- it returned 14!
+2020-10-08 15:45:54,175 django.utils.autoreload INFO     C:\Lek\personalProfile\views.py changed, reloading.
+2020-10-08 15:45:54,191 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 15:45:55,447 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 15:45:55,949 django.request ERROR    Internal Server Error: /profile/main_cab/
+Traceback (most recent call last):
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Lek\personalProfile\views.py", line 16, in get_main_cab
+    userlistMeetings = models.listMeetings.objects.get(users_invited)
+NameError: name 'users_invited' is not defined
+2020-10-08 15:46:24,976 django.utils.autoreload INFO     C:\Lek\personalProfile\views.py changed, reloading.
+2020-10-08 15:46:24,978 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 15:46:26,034 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 15:46:31,315 django.utils.autoreload INFO     C:\Lek\personalProfile\views.py changed, reloading.
+2020-10-08 15:46:31,330 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 15:46:32,528 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 15:46:35,429 django.utils.autoreload INFO     C:\Lek\personalProfile\views.py changed, reloading.
+2020-10-08 15:46:35,429 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 15:46:36,578 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 15:47:00,818 django.utils.autoreload INFO     C:\Lek\personalProfile\views.py changed, reloading.
+2020-10-08 15:47:00,818 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 15:47:01,990 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 15:47:13,959 django.utils.autoreload INFO     C:\Lek\personalProfile\views.py changed, reloading.
+2020-10-08 15:47:13,975 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 15:47:15,310 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 15:47:19,390 django.request WARNING  Not Found: /favicon.ico
+2020-10-08 15:47:28,550 django.utils.autoreload INFO     C:\Lek\personalProfile\views.py changed, reloading.
+2020-10-08 15:47:28,550 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 15:47:29,869 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 15:47:32,943 django.request WARNING  Not Found: /favicon.ico
+2020-10-08 15:48:04,938 django.utils.autoreload INFO     C:\Lek\personalProfile\views.py changed, reloading.
+2020-10-08 15:48:04,938 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 15:48:06,195 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 15:48:21,956 django.utils.autoreload INFO     C:\Lek\personalProfile\views.py changed, reloading.
+2020-10-08 15:48:21,972 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 15:48:23,249 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 15:48:25,670 django.request ERROR    Internal Server Error: /profile/main_cab/
+Traceback (most recent call last):
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Lek\personalProfile\views.py", line 18, in get_main_cab
+    for a in i:
+TypeError: 'listMeetings' object is not iterable
+2020-10-08 15:48:45,285 django.request ERROR    Internal Server Error: /profile/main_cab/
+Traceback (most recent call last):
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Lek\personalProfile\views.py", line 18, in get_main_cab
+    print(data(i))
+TypeError: 'listMeetings' object is not iterable
+2020-10-08 15:48:45,301 django.utils.autoreload INFO     C:\Lek\personalProfile\views.py changed, reloading.
+2020-10-08 15:48:45,301 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 15:48:46,488 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 15:49:04,317 django.utils.autoreload INFO     C:\Lek\personalProfile\views.py changed, reloading.
+2020-10-08 15:49:04,317 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 15:49:05,621 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 15:49:43,549 django.utils.autoreload INFO     C:\Lek\personalProfile\views.py changed, reloading.
+2020-10-08 15:49:43,549 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 15:49:44,752 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 15:49:51,261 django.request WARNING  Not Found: /favicon.ico
+2020-10-08 15:49:56,789 django.utils.autoreload INFO     C:\Lek\personalProfile\views.py changed, reloading.
+2020-10-08 15:49:56,789 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 15:49:58,299 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 15:50:13,943 django.utils.autoreload INFO     C:\Lek\personalProfile\views.py changed, reloading.
+2020-10-08 15:50:13,943 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 15:50:15,481 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 15:50:15,797 django.request ERROR    Internal Server Error: /profile/main_cab/
+Traceback (most recent call last):
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Lek\personalProfile\views.py", line 18, in get_main_cab
+    print(i[0])
+TypeError: 'listMeetings' object is not subscriptable
+2020-10-08 15:50:36,809 django.utils.autoreload INFO     C:\Lek\personalProfile\views.py changed, reloading.
+2020-10-08 15:50:36,809 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 15:50:38,228 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 15:50:56,426 django.utils.autoreload INFO     C:\Lek\personalProfile\views.py changed, reloading.
+2020-10-08 15:50:56,426 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 15:50:57,966 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 15:50:58,561 django.request ERROR    Internal Server Error: /profile/main_cab/
+Traceback (most recent call last):
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Lek\personalProfile\views.py", line 17, in get_main_cab
+    print(userlistMeetings[0].title)
+AttributeError: 'listMeetings' object has no attribute 'title'
+2020-10-08 15:51:07,415 django.utils.autoreload INFO     C:\Lek\personalProfile\views.py changed, reloading.
+2020-10-08 15:51:07,447 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 15:51:08,650 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 15:51:09,066 django.request ERROR    Internal Server Error: /profile/main_cab/
+Traceback (most recent call last):
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Lek\personalProfile\views.py", line 18, in get_main_cab
+    print(i.title)
+AttributeError: 'listMeetings' object has no attribute 'title'
+2020-10-08 15:51:15,359 django.utils.autoreload INFO     C:\Lek\personalProfile\views.py changed, reloading.
+2020-10-08 15:51:15,359 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 15:51:16,854 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 15:51:20,886 django.utils.autoreload INFO     C:\Lek\personalProfile\views.py changed, reloading.
+2020-10-08 15:51:20,902 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 15:51:22,083 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 15:51:32,801 django.utils.autoreload INFO     C:\Lek\personalProfile\views.py changed, reloading.
+2020-10-08 15:51:32,801 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 15:51:33,891 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 15:51:42,969 django.utils.autoreload INFO     C:\Lek\personalProfile\views.py changed, reloading.
+2020-10-08 15:51:42,969 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 15:51:44,342 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 15:52:02,410 django.utils.autoreload INFO     C:\Lek\personalProfile\views.py changed, reloading.
+2020-10-08 15:52:02,410 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 15:52:03,593 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 15:52:10,103 django.utils.autoreload INFO     C:\Lek\personalProfile\views.py changed, reloading.
+2020-10-08 15:52:10,103 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 15:52:11,284 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 15:52:24,386 django.utils.autoreload INFO     C:\Lek\personalProfile\views.py changed, reloading.
+2020-10-08 15:52:24,402 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 15:52:25,520 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 15:52:35,128 django.request WARNING  Not Found: /favicon.ico
+2020-10-08 15:52:40,081 django.utils.autoreload INFO     C:\Lek\personalProfile\views.py changed, reloading.
+2020-10-08 15:52:40,081 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 15:52:41,231 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 15:52:52,975 django.utils.autoreload INFO     C:\Lek\personalProfile\views.py changed, reloading.
+2020-10-08 15:52:52,975 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 15:52:54,011 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 15:53:19,896 django.utils.autoreload INFO     C:\Lek\personalProfile\views.py changed, reloading.
+2020-10-08 15:53:19,896 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 15:53:21,049 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 15:53:45,238 django.utils.autoreload INFO     C:\Lek\personalProfile\views.py changed, reloading.
+2020-10-08 15:53:45,238 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 15:53:46,371 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 15:54:28,286 django.utils.autoreload INFO     C:\Lek\personalProfile\views.py changed, reloading.
+2020-10-08 15:54:28,286 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 15:54:29,505 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 15:54:53,888 django.utils.autoreload INFO     C:\Lek\personalProfile\views.py changed, reloading.
+2020-10-08 15:54:53,903 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 15:54:55,115 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 15:56:01,358 django.utils.autoreload INFO     C:\Lek\personalProfile\views.py changed, reloading.
+2020-10-08 15:56:01,358 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 15:56:02,508 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 15:56:25,440 django.utils.autoreload INFO     C:\Lek\personalProfile\views.py changed, reloading.
+2020-10-08 15:56:25,440 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 15:56:26,690 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 15:56:47,156 django.utils.autoreload INFO     C:\Lek\personalProfile\views.py changed, reloading.
+2020-10-08 15:56:47,156 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 15:56:48,578 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 15:56:52,726 django.utils.autoreload INFO     C:\Lek\personalProfile\views.py changed, reloading.
+2020-10-08 15:56:52,726 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 15:56:54,142 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 15:57:14,538 django.utils.autoreload INFO     C:\Lek\personalProfile\views.py changed, reloading.
+2020-10-08 15:57:14,538 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 15:57:15,687 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 15:57:27,146 django.utils.autoreload INFO     C:\Lek\personalProfile\views.py changed, reloading.
+2020-10-08 15:57:27,146 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 15:57:28,173 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 15:57:58,766 django.utils.autoreload INFO     C:\Lek\personalProfile\views.py changed, reloading.
+2020-10-08 15:57:58,766 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 15:57:59,900 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 15:58:05,200 django.utils.autoreload INFO     C:\Lek\personalProfile\views.py changed, reloading.
+2020-10-08 15:58:05,200 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 15:58:06,421 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 15:58:19,423 django.utils.autoreload INFO     C:\Lek\personalProfile\views.py changed, reloading.
+2020-10-08 15:58:19,423 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 15:58:20,594 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 15:58:20,980 django.request ERROR    Internal Server Error: /profile/main_cab/
+Traceback (most recent call last):
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Lek\personalProfile\views.py", line 20, in get_main_cab
+    meetings_invited.appaned(object.accepted_meetings)
+AttributeError: 'list' object has no attribute 'appaned'
+2020-10-08 15:58:32,434 django.utils.autoreload INFO     C:\Lek\personalProfile\views.py changed, reloading.
+2020-10-08 15:58:32,434 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 15:58:33,537 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 15:59:05,362 django.utils.autoreload INFO     C:\Lek\personalProfile\views.py changed, reloading.
+2020-10-08 15:59:05,362 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 15:59:06,520 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 15:59:17,964 django.utils.autoreload INFO     C:\Lek\personalProfile\views.py changed, reloading.
+2020-10-08 15:59:17,964 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 15:59:19,011 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 16:01:17,649 django.utils.autoreload INFO     C:\Lek\personalProfile\views.py changed, reloading.
+2020-10-08 16:01:17,649 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 16:01:18,952 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 16:01:39,588 django.utils.autoreload INFO     C:\Lek\personalProfile\views.py changed, reloading.
+2020-10-08 16:01:39,588 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 16:01:40,976 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 16:02:57,785 django.utils.autoreload INFO     C:\Lek\personalProfile\views.py changed, reloading.
+2020-10-08 16:02:57,785 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 16:02:59,072 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 16:03:10,768 django.utils.autoreload INFO     C:\Lek\personalProfile\views.py changed, reloading.
+2020-10-08 16:03:10,768 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 16:03:12,002 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 16:03:12,503 django.request WARNING  Not Found: /favicon.ico
+2020-10-08 16:04:36,091 django.utils.autoreload INFO     C:\Lek\personalProfile\views.py changed, reloading.
+2020-10-08 16:04:36,091 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 16:04:37,930 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 16:04:38,454 django.request ERROR    Internal Server Error: /profile/main_cab/
+Traceback (most recent call last):
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Lek\personalProfile\views.py", line 26, in get_main_cab
+    print(re.sub("\D", "", i))
+NameError: name 'i' is not defined
+2020-10-08 16:04:38,561 django.request WARNING  Not Found: /favicon.ico
+2020-10-08 16:04:47,341 django.request ERROR    Internal Server Error: /profile/main_cab/
+Traceback (most recent call last):
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Lek\personalProfile\views.py", line 26, in get_main_cab
+    # print(re.sub("\D", "", i))
+NameError: name 'i' is not defined
+2020-10-08 16:04:47,488 django.request WARNING  Not Found: /favicon.ico
+2020-10-08 16:04:47,567 django.utils.autoreload INFO     C:\Lek\personalProfile\views.py changed, reloading.
+2020-10-08 16:04:47,569 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 16:04:48,841 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 16:05:27,011 django.utils.autoreload INFO     C:\Lek\personalProfile\views.py changed, reloading.
+2020-10-08 16:05:27,011 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 16:05:28,230 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 16:05:41,391 django.utils.autoreload INFO     C:\Lek\personalProfile\views.py changed, reloading.
+2020-10-08 16:05:41,391 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 16:05:42,510 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 16:06:08,095 django.utils.autoreload INFO     C:\Lek\personalProfile\views.py changed, reloading.
+2020-10-08 16:06:08,095 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 16:06:09,461 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 16:07:11,726 django.utils.autoreload INFO     C:\Lek\meeting\views.py changed, reloading.
+2020-10-08 16:07:11,726 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 16:07:12,780 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 16:08:28,306 django.utils.autoreload INFO     C:\Lek\meeting\views.py changed, reloading.
+2020-10-08 16:08:28,306 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 16:08:29,397 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 16:08:36,504 django.request WARNING  Not Found: /favicon.ico
+2020-10-08 16:09:10,558 django.utils.autoreload INFO     C:\Lek\meeting\views.py changed, reloading.
+2020-10-08 16:09:10,558 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 16:09:11,757 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 16:09:43,766 django.utils.autoreload INFO     C:\Lek\meeting\views.py changed, reloading.
+2020-10-08 16:09:43,782 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 16:09:44,952 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 16:10:14,608 django.utils.autoreload INFO     C:\Lek\meeting\views.py changed, reloading.
+2020-10-08 16:10:14,608 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 16:10:15,827 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 16:10:29,281 django.request ERROR    Internal Server Error: /meeting/
+Traceback (most recent call last):
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Lek\meeting\views.py", line 60, in create_meeting
+    send_message_users(userToInvitedList,researchAcceptList)
+  File "C:\Lek\meeting\views.py", line 15, in send_message_users
+    description = requestListMkiModels.DocRequestListMki.objects.get(id=i)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\db\models\query.py", line 415, in get
+    raise self.model.DoesNotExist(
+createRequest.models.DocRequestListMki.DoesNotExist: DocRequestListMki matching query does not exist.
+2020-10-08 16:11:25,526 django.utils.autoreload INFO     C:\Lek\meeting\views.py changed, reloading.
+2020-10-08 16:11:25,526 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 16:11:26,713 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 16:11:41,794 django.request ERROR    Internal Server Error: /meeting/
+Traceback (most recent call last):
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\db\models\fields\__init__.py", line 1772, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: ','
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Lek\meeting\views.py", line 60, in create_meeting
+    send_message_users(userToInvitedList,researchAcceptList)
+  File "C:\Lek\meeting\views.py", line 15, in send_message_users
+    description = requestListMkiModels.DocRequestListMki.objects.get(id=i)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\db\models\query.py", line 404, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\db\models\query.py", line 904, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\db\models\query.py", line 923, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\db\models\sql\query.py", line 1351, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\db\models\sql\query.py", line 1378, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\db\models\sql\query.py", line 1312, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\db\models\sql\query.py", line 1166, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\db\models\lookups.py", line 22, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\db\models\lookups.py", line 72, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\db\models\fields\__init__.py", line 1774, in get_prep_value
+    raise e.__class__(
+ValueError: Field 'id' expected a number but got ','.
+2020-10-08 16:12:28,268 django.utils.autoreload INFO     C:\Lek\meeting\views.py changed, reloading.
+2020-10-08 16:12:28,268 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 16:12:29,384 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 16:13:04,967 django.utils.autoreload INFO     C:\Lek\meeting\views.py changed, reloading.
+2020-10-08 16:13:04,967 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 16:13:06,301 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 16:13:07,890 django.request ERROR    Internal Server Error: /meeting/
+Traceback (most recent call last):
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Lek\meeting\views.py", line 47, in create_meeting
+    researchAcceptListFix += str(i[9:]) + ','
+UnboundLocalError: local variable 'researchAcceptListFix' referenced before assignment
+2020-10-08 16:13:17,001 django.utils.autoreload INFO     C:\Lek\meeting\views.py changed, reloading.
+2020-10-08 16:13:17,016 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 16:13:18,284 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 16:13:56,434 django.utils.autoreload INFO     C:\Lek\meeting\models.py changed, reloading.
+2020-10-08 16:13:56,434 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 16:13:57,505 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 16:14:02,899 django.utils.autoreload INFO     C:\Lek\meeting\models.py changed, reloading.
+2020-10-08 16:14:02,899 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 16:14:03,971 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 16:14:05,560 django.utils.autoreload INFO     C:\Lek\meeting\models.py changed, reloading.
+2020-10-08 16:14:05,560 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 16:14:06,809 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 16:14:08,519 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 16:14:08,587 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 16:14:20,512 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 16:14:36,868 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 16:14:41,931 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 16:16:00,103 django.utils.autoreload INFO     C:\Lek\meeting\views.py changed, reloading.
+2020-10-08 16:16:00,103 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 16:16:01,237 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 16:16:31,669 django.utils.autoreload INFO     C:\Lek\meeting\views.py changed, reloading.
+2020-10-08 16:16:31,669 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 16:16:32,895 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 16:16:43,402 django.request ERROR    Internal Server Error: /meeting/
+Traceback (most recent call last):
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Lek\meeting\views.py", line 55, in create_meeting
+    descriptionsList = get_description()
+  File "C:\Lek\meeting\views.py", line 14, in get_description
+    for i in researchs:
+NameError: name 'researchs' is not defined
+2020-10-08 16:16:58,530 django.utils.autoreload INFO     C:\Lek\meeting\views.py changed, reloading.
+2020-10-08 16:16:58,546 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 16:16:59,686 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 16:17:00,119 django.request ERROR    Internal Server Error: /meeting/
+Traceback (most recent call last):
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Lek\meeting\views.py", line 55, in create_meeting
+    descriptionsList = get_description()
+  File "C:\Lek\meeting\views.py", line 14, in get_description
+    for i in researchs:
+NameError: name 'researchs' is not defined
+2020-10-08 16:17:07,810 django.utils.autoreload INFO     C:\Lek\meeting\views.py changed, reloading.
+2020-10-08 16:17:07,810 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 16:17:09,099 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 16:17:38,203 django.utils.autoreload INFO     C:\Lek\meeting\views.py changed, reloading.
+2020-10-08 16:17:38,203 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 16:17:39,362 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 16:17:41,167 django.request ERROR    Internal Server Error: /meeting/
+Traceback (most recent call last):
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Lek\meeting\views.py", line 67, in create_meeting
+    send_message_users(userToInvitedList,researchAcceptList)
+  File "C:\Lek\meeting\views.py", line 20, in send_message_users
+    researchs_description = get_description()
+TypeError: get_description() missing 1 required positional argument: 'researchs'
+2020-10-08 16:17:51,497 django.utils.autoreload INFO     C:\Lek\meeting\views.py changed, reloading.
+2020-10-08 16:17:51,507 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 16:17:52,625 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 16:17:54,330 django.utils.autoreload INFO     C:\Lek\meeting\views.py changed, reloading.
+2020-10-08 16:17:54,330 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 16:17:55,633 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 16:17:56,150 django.request ERROR    Internal Server Error: /meeting/
+Traceback (most recent call last):
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\db\models\fields\__init__.py", line 1772, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: 'ewfqq'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Lek\meeting\views.py", line 67, in create_meeting
+    send_message_users(userToInvitedList,researchAcceptList)
+  File "C:\Lek\meeting\views.py", line 20, in send_message_users
+    researchs_description = get_description(userList)
+  File "C:\Lek\meeting\views.py", line 15, in get_description
+    description = requestListMkiModels.DocRequestListMki.objects.get(id=i)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\db\models\query.py", line 404, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\db\models\query.py", line 904, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\db\models\query.py", line 923, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\db\models\sql\query.py", line 1351, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\db\models\sql\query.py", line 1378, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\db\models\sql\query.py", line 1312, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\db\models\sql\query.py", line 1166, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\db\models\lookups.py", line 22, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\db\models\lookups.py", line 72, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\db\models\fields\__init__.py", line 1774, in get_prep_value
+    raise e.__class__(
+ValueError: Field 'id' expected a number but got 'ewfqq'.
+2020-10-08 16:18:21,414 django.utils.autoreload INFO     C:\Lek\meeting\views.py changed, reloading.
+2020-10-08 16:18:21,414 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 16:18:22,671 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 16:19:23,292 django.utils.autoreload INFO     C:\Lek\meeting\views.py changed, reloading.
+2020-10-08 16:19:23,292 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 16:19:24,511 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 16:19:26,131 django.utils.autoreload INFO     C:\Lek\meeting\views.py changed, reloading.
+2020-10-08 16:19:26,131 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 16:19:27,488 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 16:20:09,716 django.utils.autoreload INFO     C:\Lek\meeting\views.py changed, reloading.
+2020-10-08 16:20:09,717 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 16:20:10,958 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 16:21:05,694 django.utils.autoreload INFO     C:\Lek\meeting\views.py changed, reloading.
+2020-10-08 16:21:05,701 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 16:21:06,905 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 16:22:08,904 django.utils.autoreload INFO     C:\Lek\meeting\views.py changed, reloading.
+2020-10-08 16:22:08,904 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 16:22:10,025 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 16:22:22,792 django.utils.autoreload INFO     C:\Lek\meeting\views.py changed, reloading.
+2020-10-08 16:22:22,792 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 16:22:23,942 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 16:22:33,719 django.request ERROR    Internal Server Error: /meeting/
+Traceback (most recent call last):
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\db\models\fields\__init__.py", line 1772, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: 'ewfqq'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Lek\meeting\views.py", line 69, in create_meeting
+    send_message_users(userToInvitedList,researchAcceptList)
+  File "C:\Lek\meeting\views.py", line 20, in send_message_users
+    researchs_description = get_description(userList)
+  File "C:\Lek\meeting\views.py", line 15, in get_description
+    description = requestListMkiModels.DocRequestListMki.objects.get(id=i)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\db\models\query.py", line 404, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\db\models\query.py", line 904, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\db\models\query.py", line 923, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\db\models\sql\query.py", line 1351, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\db\models\sql\query.py", line 1378, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\db\models\sql\query.py", line 1312, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\db\models\sql\query.py", line 1166, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\db\models\lookups.py", line 22, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\db\models\lookups.py", line 72, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\db\models\fields\__init__.py", line 1774, in get_prep_value
+    raise e.__class__(
+ValueError: Field 'id' expected a number but got 'ewfqq'.
+2020-10-08 16:23:46,128 django.utils.autoreload INFO     C:\Lek\meeting\views.py changed, reloading.
+2020-10-08 16:23:46,128 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 16:23:47,212 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 16:25:29,794 django.utils.autoreload INFO     C:\Lek\meeting\views.py changed, reloading.
+2020-10-08 16:25:29,794 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 16:25:31,213 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 16:25:45,682 django.utils.autoreload INFO     C:\Lek\meeting\views.py changed, reloading.
+2020-10-08 16:25:45,682 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 16:25:46,848 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 16:26:38,364 django.utils.autoreload INFO     C:\Lek\meeting\views.py changed, reloading.
+2020-10-08 16:26:38,364 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 16:26:39,669 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 16:27:18,451 django.utils.autoreload INFO     C:\Lek\meeting\views.py changed, reloading.
+2020-10-08 16:27:18,451 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 16:27:19,623 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 16:27:26,150 django.utils.autoreload INFO     C:\Lek\meeting\views.py changed, reloading.
+2020-10-08 16:27:26,150 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 16:27:27,368 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 16:28:21,146 django.utils.autoreload INFO     C:\Lek\meeting\views.py changed, reloading.
+2020-10-08 16:28:21,146 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 16:28:22,302 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 16:28:32,546 django.request ERROR    Internal Server Error: /meeting/
+Traceback (most recent call last):
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Lek\meeting\views.py", line 66, in create_meeting
+    meeting.accepted_meetings_description = description
+NameError: name 'description' is not defined
+2020-10-08 16:28:46,819 django.utils.autoreload INFO     C:\Lek\meeting\views.py changed, reloading.
+2020-10-08 16:28:46,819 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 16:28:47,975 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 16:30:19,126 django.utils.autoreload INFO     C:\Lek\personalProfile\views.py changed, reloading.
+2020-10-08 16:30:19,126 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 16:30:20,285 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 16:31:18,661 django.utils.autoreload INFO     C:\Lek\personalProfile\views.py changed, reloading.
+2020-10-08 16:31:18,661 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 16:31:19,779 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 16:32:00,146 django.utils.autoreload INFO     C:\Lek\personalProfile\views.py changed, reloading.
+2020-10-08 16:32:00,146 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 16:32:01,396 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 16:32:19,510 django.utils.autoreload INFO     C:\Lek\personalProfile\views.py changed, reloading.
+2020-10-08 16:32:19,510 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 16:32:20,707 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-08 16:36:03,266 django.request WARNING  Not Found: /favicon.ico
+2020-10-08 16:36:22,431 django.request WARNING  Not Found: /favicon.ico
+2020-10-08 16:41:11,773 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-08 16:41:11,873 asyncio      DEBUG    Using proactor: IocpProactor

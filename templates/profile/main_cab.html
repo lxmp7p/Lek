@@ -8,6 +8,32 @@
                 <button class='btn btn-info' type="button" onclick="location.href = `{% url 'historyRequests' %}`">История заявок</button>
             </div>
     </nav>
+
+
+
+            <h1>Предстоящие исследования</h1>
+<table class="table" border="solid">
+    <thead class="thead-dark">
+    <tr>
+        <th scope="col">Темы</th>
+        <th scope="col">Дата проведения</th>
+        <th scope="col">Время проведения</th>
+	</tr>
+    </thead>
+    {% for list in meetingInvited reversed %}
+    <form method="POST">
+        {% csrf_token %}
+        <tr>
+            <td> {{ list.accepted_meetings_description }} </td>
+            <td> {{ list.date }} </td>
+			<td> {{ list.time }} </td>
+        </tr>
+    </form>
+    {% endfor %}
+</div>
+</table>
+
+
             <h1>Мои заявки</h1>
 <table class="table" border="solid">
     <thead class="thead-dark">
