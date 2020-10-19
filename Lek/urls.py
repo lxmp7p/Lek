@@ -39,6 +39,8 @@ urlpatterns = [
     path('logout/', views.LogoutView.as_view(next_page='/'), name='logout'),
     path('profile/', include('personalProfile.urls'), name='profile'),
     path('meeting/', include('meeting.urls'), name='meeting'),
+    #path('openMeeting/', include('meeting.urls'), name='meeting'),
+    path('infoRequestFix/<int:idRequest>/', include("infoRequest.urls")),
     path('infoRequest/<int:idRequest>/', include("infoRequest.urls")),
     path('profile/watch_requests/<int:idRequest>/', include("infoRequest.urls")),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

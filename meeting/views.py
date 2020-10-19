@@ -5,7 +5,23 @@ from .forms import meetingCreate
 from .models import listMeetings
 from listForRegistration import models as listForRegistration
 from django.core.mail import send_mail
+from datetime import datetime
+from django.shortcuts import render
+from django.http import HttpResponse, response, request
+# Create your views here.
+from createRequest import models
+from createRequest import forms
 import re
+from django.shortcuts import redirect
+from listForRegistration import models as userListModel
+from django.core.mail import send_mail
+from createRequest import models as listRequestResearchModels
+import logging
+
+import re
+
+
+now = datetime.now()
 
 # Create your views here.
 
@@ -16,6 +32,7 @@ def get_description(researchs):
         researchs_description.append(description.description)
     return researchs_description
 
+
 def send_message_users(userList,researchs):
     researchs_description = get_description(researchs)
     for username in userList:
@@ -23,6 +40,36 @@ def send_message_users(userList,researchs):
         send_mail('Добавление в исследование', 'Вы были добавлены в список участников для обсуждения таких тем как: ' + str(researchs_description), 'timurgorashenko@yandex.ru',
                   [user.email], fail_silently=False)
 
+def open_meeting(request):
+    meetingAccepted = listMeetings.objects.all()
+    tmp = []
+    for object in meetingAccepted:
+        if (request.user.username in object.users_invited):
+            if (object.date == now.strftime("%Y-%m-%d")):
+                meetingList = object
+    '''
+    tmp = []
+    for object in meetingList:
+        tmp.append(object.accepted_meetings)
+    meetindTheme = tmp
+    print(meetindTheme)
+    '''
+    tmp = []
+    num = ''
+    meetingName = meetingList.accepted_meetings_description
+    for id in meetingList.accepted_meetings:
+        if id != ',':
+             num += id
+        else:
+            tmp.append(num)
+            num = ''
+    meetingIdList = tmp
+    tmp = []
+    meetings = []
+    for id in meetingIdList:
+        meetings.append(requestListMkiModels.DocRequestListMki.objects.get(id=id))
+    context = {'username': request.user.username, 'fio': request.user.fio, 'role_id': request.user.role_id, 'meetings':meetings}
+    return render(request, 'meeting/openMeeting.html', context=context)
 
 def create_meeting(request):
     userList = models.registeredUsers.objects.all()
@@ -51,9 +98,6 @@ def create_meeting(request):
             researchAcceptList.append(i[9:])
             researchAcceptListFix += str(i[9:]) + ','
 
-        #print(researchAcceptList)
-
-        #print(descriptionsList)
         descriptionsList = get_description(researchAcceptList)
         form = meetingCreate(request.POST)
         if form.is_valid():
@@ -64,7 +108,6 @@ def create_meeting(request):
             meeting.date = date
             meeting.accepted_meetings = researchAcceptListFix
             meeting.accepted_meetings_description = descriptionsList
-            print(userToInvitedList)
             meeting.users_invited = userToInvitedList
             meeting.save()
             send_message_users(userToInvitedList,researchAcceptList)
@@ -73,3 +116,4 @@ def create_meeting(request):
 
         return render(request, 'meeting/createMeeting.html', context=content)
     return render(request, 'meeting/createMeeting.html', context=content)
+

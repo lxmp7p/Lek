@@ -62,3 +62,28 @@ def get_info_reguest(request, idRequest):
                 'files': files,
                 }
         return render(request, 'infoRequest/infoRequest.html', content)
+
+
+
+def get_info_reguest_fix(request, idRequest):
+        form = forms.DocRequestListMkiForm()
+        infoRequest = models.DocRequestListMki.objects.filter(id=idRequest)
+        files = ( 'list_members',
+                  'accept_research',
+                  'protocol_research',
+                  'form_inf',
+                  'cast_researcher',
+                  'contract',
+                  'advertising',
+                  'write_objects',
+                  'another_doc',)
+        content = {
+                'form': form,
+                'username': request.user.username,
+                'role_id': request.user.role_id,
+                'fio': request.user.fio,
+                'infoRequest': infoRequest,
+                'idRequest': infoRequest,
+                'files': files,
+                }
+        return render(request, 'meeting/objectWatch.html', content)
