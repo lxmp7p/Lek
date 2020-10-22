@@ -3,6 +3,7 @@
 <div class="container">
   <div class="row">
     <div class="col-sm text-center"
+         <h1> {{ error }} </h1>
  {% for list in meetings reversed %}
     <form method="POST">
         {% csrf_token %}

@@ -1,5 +1,4 @@
 from django.shortcuts import render, redirect
-from listForRegistration import models
 from createRequest import models as requestListMkiModels
 from .forms import meetingCreate
 from .models import listMeetings
@@ -43,6 +42,8 @@ def send_message_users(userList,researchs):
 def open_meeting(request):
     meetingAccepted = listMeetings.objects.all()
     tmp = []
+    meetingList = None
+    #meetingList = None
     for object in meetingAccepted:
         if (request.user.username in object.users_invited):
             if (object.date == now.strftime("%Y-%m-%d")):
@@ -56,6 +57,10 @@ def open_meeting(request):
     '''
     tmp = []
     num = ''
+    if not meetingList:
+        message = "На сегодня не назначено совещаний!"
+        context = {'username': request.user.username, 'fio': request.user.fio, 'role_id': request.user.role_id, 'error': message, }
+        return render(request, 'meeting/openMeeting.html', context=context)
     meetingName = meetingList.accepted_meetings_description
     for id in meetingList.accepted_meetings:
         if id != ',':
@@ -72,7 +77,7 @@ def open_meeting(request):
     return render(request, 'meeting/openMeeting.html', context=context)
 
 def create_meeting(request):
-    userList = models.registeredUsers.objects.all()
+    userList = userListModel.registeredUsers.objects.all()
     requestListMki = requestListMkiModels.DocRequestListMki.objects.filter(status='True')
     form = meetingCreate()
     content = {

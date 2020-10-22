@@ -2456,3 +2456,334 @@ AttributeError: module 'createRequest.models' has no attribute 'registeredUsers'
 2020-10-19 20:22:21,930 django.utils.autoreload INFO     Watching for file changes with StatReloader
 2020-10-19 20:22:57,629 asyncio      DEBUG    Using proactor: IocpProactor
 2020-10-19 20:22:57,720 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-22 15:06:26,551 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-22 15:06:30,568 django.request WARNING  Not Found: /favicon.ico
+2020-10-22 15:06:34,895 login.views  INFO     admin auth in system!
+2020-10-22 15:06:37,233 django.request WARNING  Not Found: /favicon.ico
+2020-10-22 15:06:59,184 django.request WARNING  Not Found: /favicon.ico
+2020-10-22 15:07:00,726 django.request ERROR    Internal Server Error: /meeting/
+Traceback (most recent call last):
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Компьютер\Lek\meeting\views.py", line 75, in create_meeting
+    userList = models.registeredUsers.objects.all()
+AttributeError: module 'createRequest.models' has no attribute 'registeredUsers'
+2020-10-22 15:07:04,537 django.request ERROR    Internal Server Error: /meeting/openMeeting/
+Traceback (most recent call last):
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Компьютер\Lek\meeting\views.py", line 59, in open_meeting
+    meetingName = meetingList.accepted_meetings_description
+UnboundLocalError: local variable 'meetingList' referenced before assignment
+2020-10-22 15:07:13,786 django.request ERROR    Internal Server Error: /meeting/openMeeting/
+Traceback (most recent call last):
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Компьютер\Lek\meeting\views.py", line 59, in open_meeting
+    meetingName = meetingList.accepted_meetings_description
+UnboundLocalError: local variable 'meetingList' referenced before assignment
+2020-10-22 15:07:16,092 django.request ERROR    Internal Server Error: /meeting/
+Traceback (most recent call last):
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Компьютер\Lek\meeting\views.py", line 75, in create_meeting
+    userList = models.registeredUsers.objects.all()
+AttributeError: module 'createRequest.models' has no attribute 'registeredUsers'
+2020-10-22 15:07:52,088 django.request ERROR    Internal Server Error: /meeting/
+Traceback (most recent call last):
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Компьютер\Lek\meeting\views.py", line 75, in create_meeting
+    userList = models.registeredUsers.objects.all()
+AttributeError: module 'createRequest.models' has no attribute 'registeredUsers'
+2020-10-22 15:07:57,134 django.request ERROR    Internal Server Error: /meeting/openMeeting/
+Traceback (most recent call last):
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Компьютер\Lek\meeting\views.py", line 59, in open_meeting
+    meetingName = meetingList.accepted_meetings_description
+UnboundLocalError: local variable 'meetingList' referenced before assignment
+2020-10-22 15:08:03,006 django.request WARNING  Not Found: /meeting/openMeeting/1/openMeeting/
+2020-10-22 15:08:09,826 django.request WARNING  Not Found: /meeting/infoRequestFix/1/infoRequestFix/
+2020-10-22 15:08:13,400 django.request WARNING  Not Found: /meeting/infoRequestFix/1
+2020-10-22 15:08:19,533 django.request ERROR    Internal Server Error: /meeting/openMeeting/
+Traceback (most recent call last):
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Компьютер\Lek\meeting\views.py", line 59, in open_meeting
+    meetingName = meetingList.accepted_meetings_description
+UnboundLocalError: local variable 'meetingList' referenced before assignment
+2020-10-22 15:08:24,532 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-22 15:08:24,701 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-22 15:09:05,762 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-22 15:09:07,772 django.request ERROR    Internal Server Error: /meeting/
+Traceback (most recent call last):
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Компьютер\Lek\meeting\views.py", line 75, in create_meeting
+    userList = models.registeredUsers.objects.all()
+AttributeError: module 'createRequest.models' has no attribute 'registeredUsers'
+2020-10-22 15:09:18,112 django.request ERROR    Internal Server Error: /meeting/openMeeting/
+Traceback (most recent call last):
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Компьютер\Lek\meeting\views.py", line 59, in open_meeting
+    meetingName = meetingList.accepted_meetings_description
+UnboundLocalError: local variable 'meetingList' referenced before assignment
+2020-10-22 15:09:23,589 django.request WARNING  Not Found: /meeting/openrew
+2020-10-22 15:10:01,327 django.request WARNING  Not Found: /meeting/openrew
+2020-10-22 15:11:03,225 django.request ERROR    Internal Server Error: /meeting/openMeeting/
+Traceback (most recent call last):
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Компьютер\Lek\meeting\views.py", line 59, in open_meeting
+    meetingName = meetingList.accepted_meetings_description
+UnboundLocalError: local variable 'meetingList' referenced before assignment
+2020-10-22 15:12:27,345 django.request ERROR    Internal Server Error: /meeting/openMeeting/
+Traceback (most recent call last):
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Компьютер\Lek\meeting\views.py", line 59, in open_meeting
+    num = ''
+UnboundLocalError: local variable 'meetingList' referenced before assignment
+2020-10-22 15:12:27,652 django.utils.autoreload INFO     C:\Users\Компьютер\Lek\meeting\views.py changed, reloading.
+2020-10-22 15:12:27,652 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-22 15:12:28,817 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-22 15:12:29,187 django.request ERROR    Internal Server Error: /meeting/openMeeting/
+Traceback (most recent call last):
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Компьютер\Lek\meeting\views.py", line 60, in open_meeting
+    meetingName = meetingList.accepted_meetings_description
+AttributeError: 'NoneType' object has no attribute 'accepted_meetings_description'
+2020-10-22 15:12:41,839 django.utils.autoreload INFO     C:\Users\Компьютер\Lek\meeting\views.py changed, reloading.
+2020-10-22 15:12:41,839 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-22 15:12:43,055 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-22 15:13:56,413 django.request ERROR    Internal Server Error: /meeting/openMeeting/
+Traceback (most recent call last):
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Компьютер\Lek\meeting\views.py", line 59, in open_meeting
+    meetingName = meetingList.accepted_meetings_description
+UnboundLocalError: local variable 'meetingList' referenced before assignment
+2020-10-22 15:13:57,870 django.request ERROR    Internal Server Error: /meeting/openMeeting/
+Traceback (most recent call last):
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Компьютер\Lek\meeting\views.py", line 59, in open_meeting
+    meetingName = meetingList.accepted_meetings_description
+UnboundLocalError: local variable 'meetingList' referenced before assignment
+2020-10-22 15:14:08,775 django.utils.autoreload INFO     C:\Users\Компьютер\Lek\meeting\views.py changed, reloading.
+2020-10-22 15:14:08,775 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-22 15:14:10,078 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-22 15:14:10,457 django.request ERROR    Internal Server Error: /meeting/openMeeting/
+Traceback (most recent call last):
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Компьютер\Lek\meeting\views.py", line 60, in open_meeting
+    meetingName = meetingList.accepted_meetings_description
+AttributeError: 'NoneType' object has no attribute 'accepted_meetings_description'
+2020-10-22 15:14:11,961 django.request ERROR    Internal Server Error: /meeting/openMeeting/
+Traceback (most recent call last):
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Компьютер\Lek\meeting\views.py", line 60, in open_meeting
+    meetingName = meetingList.accepted_meetings_description
+AttributeError: 'NoneType' object has no attribute 'accepted_meetings_description'
+2020-10-22 15:14:28,378 django.request ERROR    Internal Server Error: /meeting/openMeeting/
+Traceback (most recent call last):
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Компьютер\Lek\meeting\views.py", line 60, in open_meeting
+    meetingName = meetingList.accepted_meetings_description
+AttributeError: 'NoneType' object has no attribute 'accepted_meetings_description'
+2020-10-22 15:14:32,390 django.request ERROR    Internal Server Error: /meeting/
+Traceback (most recent call last):
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Компьютер\Lek\meeting\views.py", line 76, in create_meeting
+    userList = models.registeredUsers.objects.all()
+AttributeError: module 'createRequest.models' has no attribute 'registeredUsers'
+2020-10-22 15:14:45,491 django.utils.autoreload INFO     C:\Users\Компьютер\Lek\meeting\views.py changed, reloading.
+2020-10-22 15:14:45,491 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-22 15:14:46,867 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-22 15:14:57,169 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-22 15:14:57,238 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-22 15:14:59,961 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-22 15:15:01,312 django.request ERROR    Internal Server Error: /meeting/
+Traceback (most recent call last):
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Компьютер\Lek\meeting\views.py", line 76, in create_meeting
+    userList = models.registeredUsers.objects.all()
+AttributeError: module 'createRequest.models' has no attribute 'registeredUsers'
+2020-10-22 15:16:35,947 django.utils.autoreload INFO     C:\Users\Компьютер\Lek\meeting\views.py changed, reloading.
+2020-10-22 15:16:35,947 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-22 15:16:37,113 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-22 15:17:35,244 django.request ERROR    Internal Server Error: /meeting/openMeeting/
+Traceback (most recent call last):
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Компьютер\Lek\meeting\views.py", line 59, in open_meeting
+    meetingName = meetingList.accepted_meetings_description
+UnboundLocalError: local variable 'meetingList' referenced before assignment
+2020-10-22 15:18:32,206 django.utils.autoreload INFO     C:\Users\Компьютер\Lek\meeting\views.py changed, reloading.
+2020-10-22 15:18:32,206 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-22 15:18:33,478 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-22 15:18:33,779 django.request ERROR    Internal Server Error: /meeting/openMeeting/
+Traceback (most recent call last):
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Компьютер\Lek\meeting\views.py", line 61, in open_meeting
+    meetingName = meetingList.accepted_meetings_description
+AttributeError: 'NoneType' object has no attribute 'accepted_meetings_description'
+2020-10-22 15:18:56,646 django.utils.autoreload INFO     C:\Users\Компьютер\Lek\meeting\views.py changed, reloading.
+2020-10-22 15:18:56,646 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-22 15:18:57,933 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-22 15:19:10,748 django.request ERROR    Internal Server Error: /meeting/openMeeting/
+Traceback (most recent call last):
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Компьютер\Lek\meeting\views.py", line 62, in open_meeting
+    break
+AttributeError: 'NoneType' object has no attribute 'accepted_meetings_description'
+2020-10-22 15:19:11,187 django.utils.autoreload INFO     C:\Users\Компьютер\Lek\meeting\views.py changed, reloading.
+2020-10-22 15:19:11,187 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-22 15:19:12,537 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-22 15:19:19,006 django.utils.autoreload INFO     C:\Users\Компьютер\Lek\meeting\views.py changed, reloading.
+2020-10-22 15:19:19,006 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-22 15:19:20,154 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-22 15:19:26,780 django.utils.autoreload INFO     C:\Users\Компьютер\Lek\meeting\views.py changed, reloading.
+2020-10-22 15:19:26,780 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-22 15:19:28,045 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-22 15:19:28,400 django.request ERROR    Internal Server Error: /meeting/openMeeting/
+Traceback (most recent call last):
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Компьютер\Lek\meeting\views.py", line 63, in open_meeting
+    meetingName = meetingList.accepted_meetings_description
+AttributeError: 'NoneType' object has no attribute 'accepted_meetings_description'
+2020-10-22 15:20:00,174 django.utils.autoreload INFO     C:\Users\Компьютер\Lek\meeting\views.py changed, reloading.
+2020-10-22 15:20:00,174 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-22 15:20:02,033 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-22 15:21:02,053 django.utils.autoreload INFO     C:\Users\Компьютер\Lek\meeting\views.py changed, reloading.
+2020-10-22 15:21:02,053 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-22 15:21:03,187 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-22 15:21:49,353 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-22 15:21:49,422 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-22 15:21:54,152 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-22 15:23:18,668 django.utils.autoreload INFO     C:\Users\Компьютер\Lek\meeting\views.py changed, reloading.
+2020-10-22 15:23:18,668 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-22 15:23:20,056 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-22 15:23:34,860 django.utils.autoreload INFO     C:\Users\Компьютер\Lek\meeting\views.py changed, reloading.
+2020-10-22 15:23:34,885 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-22 15:23:36,280 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-10-22 15:25:17,646 createRequest.views INFO     admin open createRequest page!
+2020-10-22 15:25:19,652 createRequest.views INFO     admin open createRequest page!
+2020-10-22 15:25:37,574 django.request ERROR    Internal Server Error: /meeting/openMeeting/
+Traceback (most recent call last):
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Компьютер\Lek\meeting\views.py", line 76, in open_meeting
+    context = {'username': request.user.username, 'fio': request.user.fio, 'role_id': request.user.role_id, 'meetings':meetings}
+  File "C:\Users\Компьютер\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\utils\functional.py", line 225, in inner
+    return func(self._wrapped, *args)
+AttributeError: 'AnonymousUser' object has no attribute 'fio'
+2020-10-22 15:25:44,911 asyncio      DEBUG    Using proactor: IocpProactor
+2020-10-22 15:25:45,011 asyncio      DEBUG    Using proactor: IocpProactor
